@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameter Type Function</title>
+</head>
+<body>
+    <h1>This is a Parameter Type Function</h1>
+    <h2>This function takes two values as parameters.</h2>
+    <script>
+        function parameterFunction(userValue, defaultValue) {
+            // Check if userValue is provided; if not, use defaultValue
+            return userValue !== undefined ? userValue : defaultValue;
+        }
+
+        // Example calls to the function
+        console.log(parameterFunction(10, 5)); // Output: 10
+        console.log(parameterFunction(undefined, 5)); // Output: 5
+    </script>
+</body>
+</html>

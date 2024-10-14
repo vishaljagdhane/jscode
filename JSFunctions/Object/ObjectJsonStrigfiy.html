@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object JSON Stringfiy</title>
+</head>
+<body>
+    <h1>Object JSON Stringfiy</h1>
+    <script>
+        let ObjectMethods={
+            fname:'vishal',
+            lname:'jagdhane',
+            age:25,  
+            city:'pune',
+            contact:'9876543210',
+           fullname: function(){
+        return this.fname + "  " + this.lname
+        
+           }
+        }
+        const mysJsonStringfy=JSON.stringify(ObjectMethods)
+        document.write(mysJsonStringfy)
+    </script>
+</body>
+</html>

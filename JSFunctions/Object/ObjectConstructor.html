@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructor</title>
+</head>
+<body>
+    <h1>Object Constructor Using By Object</h1>
+
+    <script>
+
+        function ObjectConstructor(fname,lnmae,age,localadress,paramentAdress)
+        {
+this.fristname=fname;
+this.lastname=lnmae;
+this.PersonAge=age ;
+
+this.localAdress=localadress;
+
+this.paramentAdress=paramentAdress;
+
+        }
+
+        
+    const person = new ObjectConstructor('Vishal','Jagdhane',28,'pune','Auranagabad')
+    document.write(`Name :  ${person.fristname} ${person.lastname} <br>`)
+    document.write(`Ages :${person.PersonAge}<br>`)
+    document.write(`Local Address:  ${person.localAdress} <br>`)
+    document.write(`Parament Address:  ${person.paramentAdress}<br>`)
+    
+    const array=Object.values(person)
+        document.write("This Array Of Objects:  ",array,"<br>")
+
+
+    const JsonStringy= JSON.stringify(person)
+document.write("This Json Convert Object",JsonStringy)
+
+    
+    </script> 
+
+</body>
+</html>

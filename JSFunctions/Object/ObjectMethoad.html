@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object methoad </title>
+</head>
+<body>
+    <h1>This Object method Use by the code declear to Object then functions this function Concanite Total Values </h1>
+<script>
+
+let ObjectMethods={
+    fname:'vishal',
+    lname:'jagdhane',
+    age:25,  
+    city:'pune',
+    contact:'9876543210',
+   fullname: function(){
+return this.fname + "  " + this.lname
+
+   }
+}
+document.write(ObjectMethods.city)
+document.write(ObjectMethods.fullname())
+console.log(ObjectMethods.fullname())
+
+</script>
+
+</body>
+</html>

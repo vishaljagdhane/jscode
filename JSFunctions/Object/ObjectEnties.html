@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Using Object.entries() and For...of Loop</title>
+</head>
+<body>
+    <h1>Object Using Object.entries() and For...of Loop</h1>
+
+    <script>
+        const fruits = { Bananas: 300, Oranges: 200, Apples: 500 };
+        let text = ""; // Use let to allow updates to the variable
+
+        for (let [fruit, value] of Object.entries(fruits)) {
+            text += fruit + " => " + value + "<br>"; // Concatenate each fruit and value with a line break
+        }
+
+        // Write the final text to the document
+        document.write(text);
+        
+        // Log the final text in the console
+        console.log(text);
+    </script>
+</body>
+</html>
