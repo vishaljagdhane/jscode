@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnChange Example</title>
+</head>
+<body>
+    <h1>OnChange इव्हेंटचा उदाहरण</h1>
+
+    <label for="fruit">फळ निवडा:</label>
+    <select id="fruit" onchange="displayFruit()">
+        <option value="">-- निवडा --</option>
+        <option value="apple">सफरचंद</option>
+        <option value="banana">केळी</option>
+        <option value="orange">संत्रा</option>
+    </select>
+
+    <p id="result"></p>
+
+    <script>
+        function displayFruit() {
+            const selectElement = document.getElementById('fruit');
+            const selectedValue = selectElement.value;
+            const resultElement = document.getElementById('result');
+
+            if (selectedValue) {
+                resultElement.textContent = `तुम्ही निवडले आहे: ${selectedValue}`;
+            } else {
+                resultElement.textContent = '';
+            }
+        }
+    </script>
+</body>
+</html>

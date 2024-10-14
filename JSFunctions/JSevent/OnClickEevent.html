@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Event OnClick</title>
+</head>
+<body>
+    <h1>Javascript ONClick</h1>
+    <h1 id="onclickEvent">this OnClick Event</h1>
+    <button onclick="onClickEvent()">Click Me</button>
+
+    <script>
+        document.getElementById(onClickEvent).innerHTML="this OnClick Event <br>"
+     function onClickEvent(){
+      
+        document.write("He is On Clicking Event ")
+        function ObjectConstructor(fname,lnmae,age,localadress,paramentAdress)
+        {
+this.fristname=fname;
+this.lastname=lnmae;
+this.PersonAge=age ;
+
+this.localAdress=localadress;
+
+this.paramentAdress=paramentAdress;
+
+        }
+        const person = new ObjectConstructor('Vishal','Jagdhane',28,'pune','Auranagabad')
+        document.write(`Name :  ${person.fristname} ${person.lastname} <br>`)
+        document.write(`Ages :${person.PersonAge}<br>`)
+        document.write(`Local Address:  ${person.localAdress} <br>`)
+        document.write(`Parament Address:  ${person.paramentAdress}<br>`)
+        
+        const array=Object.values(person)
+            document.write("This Array Of Objects:  ",array,"<br>")
+    
+    
+        const JsonStringy= JSON.stringify(person)
+    document.write("This Json Convert Object",JsonStringy)
+        
+     }
+    </script>
+</body>
+</html>
