@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic String Match Example</title>
+</head>
+<body>
+
+    <h1>String Match Example</h1>
+
+    <script>
+        const text = "vishal is learning JavaScript. vishal enjoys coding in JavaScript.";
+        const searchTerm = "vishal"; // The word to search for
+        const resultDiv = document.createElement('div');
+
+        // Create a regular expression to match the search term
+        const regex = new RegExp(searchTerm, 'g'); // 'g' for global search
+        const matches = text.match(regex);
+
+        // Display results
+        if (matches) {
+            resultDiv.innerHTML = `Matches found: ${matches.length}`;
+        } else {
+            resultDiv.innerHTML = "No matches found.";
+        }
+
+        document.body.appendChild(resultDiv);
+    </script>
+
+</body>
+</html>x

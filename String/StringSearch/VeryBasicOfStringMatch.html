@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Match Method</title>
+</head>
+<body>
+    <h1>String Match Method</h1>
+
+    <script>
+        const str = "vishal Haribhau jagdhane!";
+        const matchstring = str.match("vishal");
+        
+        document.write("This basic string will be matched: " + str + "<br>");
+        document.write("Match result: " + (matchstring ? matchstring[0] : "No match found") + "<br>");
+
+        if (matchstring) {
+            document.write("This matched string: " + matchstring[0]);
+        } else {
+            document.write("This matched string is not found.");
+        }
+    </script>
+</body>
+</html>

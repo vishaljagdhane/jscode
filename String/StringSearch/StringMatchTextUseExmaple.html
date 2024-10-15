@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Match Example</title>
+</head>
+<body>
+
+    <h1>JavaScript String match()</h1>
+    <input type="text" id="searchInput" placeholder="Enter a word to search" />
+    <button onclick="findMatches()">Search</button>
+
+    <div id="result"></div>
+
+    <script>
+        function findMatches() {
+            const text = "vishal Haribhau Jagdhane, Haribhau is a common name.";
+            const input = document.getElementById("searchInput").value;
+            const resultDiv = document.getElementById("result");
+            
+            // Regular expression to match the input
+            const regex = new RegExp(input, 'gi'); // 'g' for global, 'i' for case insensitive
+            const matches = text.match(regex);
+            document.write(text)
+            resultDiv.innerHTML = ""; // Clear previous results
+
+            if (matches) {
+                resultDiv.innerHTML = `Matches found: ${matches.join(', ')}`;
+            } else {
+                resultDiv.innerHTML = "No matches found.";
+            }
+        }
+    </script>
+
+</body>
+</html>
