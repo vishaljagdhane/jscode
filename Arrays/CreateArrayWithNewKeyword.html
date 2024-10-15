@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array With New KeyWords</title>
+</head>
+<body>
+    <h1>Array With New Key-words</h1>
+    <script>
+        // अ‍ॅरे बनवणे
+        const array = new Array("Apple", "Banana", "Cherry", "Date");
+
+        // नवीन मूल्ये अ‍ॅरेमध्ये जोडणे
+        array.push("Elderberry");
+        array.push("Fig");
+        array.push("Grape");
+
+        // HTML सूची तयार करणे
+        let text = "<ul>";
+        array.forEach(function(item) {
+            text += "<li>" + item + "</li>";
+        });
+        text += "</ul>";
+
+        // सूची प्रदर्शित करणे
+        document.write(text);
+    </script>
+</body>
+</html>
