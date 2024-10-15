@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Onchange Method using by the Select tag my understand</title>
 </head>
 <body>
-    
+    <h1>Onchange Method My understand</h1>
+    <h1>Onchange Exmaple Third</h1>
+<select id="SlectId" onchange="OnchangeExample()">
+<option value="">Basic Of Select</option>
+<option value="vishal">Vishal</option>
+<option value="pooja">Pooja</option>
+<option value="Shubhangi">Shubhangi</option>
+<option value="Deepali">Deepali</option>
+
+</select>
+<h1 id="result"></h1>
+<script>
+    function OnchangeExample(){
+        const SlectId = document.getElementById("SlectId");
+        const slectedIteam = SlectId.value;
+        const result = document.getElementById("result");
+
+        if(slectedIteam){
+            result.textContent=`you Have Slected Values:${slectedIteam}`
+        }else {
+            resultElement.textContent = '';
+        }
+    }
+</script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Char Code Example</title>
+</head>
+<body>
+    <h1>Character Code Example</h1>
+    <h2>Using charCodeAt()</h2>
+    <p>
+        The <code>charCodeAt()</code> function is used to get the Unicode value of a specific character in a string.
+        For example, in the string "HELLO WORLD", the function can return the code for the first character, which is "H".
+    </p>
+    <p id="demo"></p>
+
+    <script>
+        let text = "HELLO WORLD";
+        document.getElementById("demo").innerHTML = text.charCodeAt(2);
+
+        // Example usage with a loop
+        for (let i = 0; i < text.length; i++) {
+            document.write(text.charCodeAt(i) + "<br> ");
+        }
+        let str="vishal"
+        let testing= str.charAt(2)
+        document.write("charCodeAt Tragted by s",+str+"   "+testing)
+
+    </script>
+</body>
+</html>
