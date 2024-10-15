@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Search Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Search Strings</h1>
+    <input type="text" id="stringInput" placeholder="Enter text to search" />
+    <button onclick="searchString()">Search</button>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        // Sample strings for search
+        const stringsArray = [
+            "vishal Haribhau Jagdhane",
+            "This is a sample string",
+            "Searching for words is fun",
+            "Haribhau is a common name",
+            "Let's search some more strings"
+        ];
+
+        function searchString() {
+            const input = document.getElementById("stringInput").value.toLowerCase();
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = ""; // Clear previous results
+
+            // Check each string in the array for the input
+            stringsArray.forEach((str, index) => {
+                if (str.toLowerCase().includes(input)) {
+                    resultDiv.innerHTML += `Found in string ${index + 1}: "${str}"<br>`;
+                }
+            });
+
+            // If no results were found
+            if (resultDiv.innerHTML === "") {
+                resultDiv.innerHTML = "No matches found.";
+            }
+        }
+    </script>
+
+</body>
+</html>

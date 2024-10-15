@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Index Of Search</title>
+</head>
+<body>
+    <h1>JavaScript String indexOf()</h1>
+    <script>
+        let str = "pooja vishu jagdhane";
+        let searchStringOfIndex = str.indexOf("vishu");
+
+        document.write("The original string is: " + str + "<br>");
+        document.write("The index of 'vishu' in the string is: " + searchStringOfIndex + "<br>");
+
+        // Adjusted the conditions
+        if (str.indexOf("vishu") === 6 && str.indexOf("pooja") === 0) {
+            document.write("Condition is true for 'vishu' and 'pooja'");
+        } else {
+            document.write("Condition is not true for 'vishu' and 'pooja'");
+        }
+    </script>
+</body>
+</html>
