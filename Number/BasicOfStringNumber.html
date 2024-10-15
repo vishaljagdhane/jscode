@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic of Numbers</title>
+</head>
+<body>
+    <h1>Basic of Numbers</h1>
+
+    <script>
+        let a = 10;
+        const b = 20;
+
+        document.write("This is a very basic example of declaring numbers: " + a + ", " + b + "<br>");
+
+        // समान (==) तपासणी
+        if (a == b) {
+            document.write("दोन्ही संख्या समान आहेत.<br>");
+        } else {
+            document.write("संख्याएँ समान नाहीत.<br>");
+        }
+
+        // समान नाही (!=) तपासणी
+        if (a != b) {
+            document.write("संख्याएँ समान नाहीत (!=).<br>");
+        } else {
+            document.write("संख्याएँ समान आहेत (!=).<br>");
+        }
+
+        // कठोर समानता (===) तपासणी
+        if (a === b) {
+            document.write("दोन्ही संख्या समान आहेत (===).<br>");
+        } else {
+            document.write("संख्याएँ समान नाहीत (===).<br>");
+        }
+
+        // कठोर असमानता (!==) तपासणी
+        if (a !== b) {
+            document.write("संख्याएँ समान नाहीत (!==).<br>");
+        } else {
+            document.write("संख्याएँ समान आहेत (!==).<br>");
+        }
+
+        // कमी (<) तपासणी
+        if (a < b) {
+            document.write("'a' ची किंमत 'b' पेक्षा कमी आहे.<br>");
+        }
+
+        // जास्त (>) तपासणी
+        if (a > b) {
+            document.write("'a' ची किंमत 'b' पेक्षा जास्त आहे.<br>");
+        } else {
+            document.write("'a' ची किंमत 'b' पेक्षा जास्त नाही.<br>");
+        }
+
+        // समान किंवा जास्त (>=) तपासणी
+        if (a >= b) {
+            document.write("'a' 'b' च्या समान किंवा जास्त आहे.<br>");
+        } else {
+            document.write("'a' 'b' च्या समान किंवा कमी नाही.<br>");
+        }
+
+        // समान किंवा कमी (<=) तपासणी
+        if (a <= b) {
+            document.write("'a' 'b' च्या समान किंवा कमी आहे.<br>");
+        } else {
+            document.write("'a' 'b' च्या समान किंवा जास्त नाही.<br>");
+        }
+
+        // सकारात्मक ( > 0) तपासणी
+        if (a > 0) {
+            document.write("'a' एक सकारात्मक संख्या आहे.<br>");
+        } else {
+            document.write("'a' सकारात्मक संख्या नाही.<br>");
+        }
+
+        // सम संख्या तपासणी
+        if (b % 2 === 0) {
+            document.write("'b' एक सम संख्या आहे.<br>");
+        } else {
+            document.write("'b' एक सम संख्या नाही.<br>");
+        }
+    </script>
+</body>
+</html>
