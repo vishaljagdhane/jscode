@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sort Methods</title>
+</head>
+<body>
+    <h1>Array Sort Methods Example</h1>
+
+    <script>
+        // Alphabetic Sort
+        const fruits = ["Banana", "Apple", "Cherry", "Date"];
+        document.write("Original Array: " + fruits.join(", ") + "<br>");
+        
+        // Array sort()
+        const sortedFruits = fruits.sort();
+        document.write("Alphabetic Sort (sort()): " + sortedFruits.join(", ") + "<br>");
+        
+        // Array reverse()
+        const reversedFruits = sortedFruits.reverse();
+        document.write("Reversed Array (reverse()): " + reversedFruits.join(", ") + "<br>");
+
+        // Array toSorted() - creates a new sorted array
+        const toSortedFruits = fruits.slice().sort(); // Using slice to avoid mutation
+        document.write("toSorted() Result: " + toSortedFruits.join(", ") + "<br>");
+
+        // Array toReversed() - creates a new reversed array
+        const toReversedFruits = sortedFruits.slice().reverse(); // Using slice to avoid mutation
+        document.write("toReversed() Result: " + toReversedFruits.join(", ") + "<br>");
+
+        // Sorting Objects
+        const people = [
+            { name: "Vishal", age: 29 },
+            { name: "Harbhau", age: 28 },
+            { name: "Jagdhane", age: 30 }
+        ];
+
+        // Sort by name
+        const sortedByName = people.slice().sort((a, b) => a.name.localeCompare(b.name));
+        document.write("Sorted by Name: " + JSON.stringify(sortedByName) + "<br>");
+
+        // Sort by age
+        const sortedByAge = people.slice().sort((a, b) => a.age - b.age);
+        document.write("Sorted by Age: " + JSON.stringify(sortedByAge) + "<br>");
+
+        // Numeric Sort
+        const numbers = [5, 2, 8, 1, 4];
+        document.write("Original Numbers: " + numbers.join(", ") + "<br>");
+        
+        // Numeric sort
+        const sortedNumbers = numbers.sort((a, b) => a - b);
+        document.write("Numeric Sort: " + sortedNumbers.join(", ") + "<br>");
+
+        // Random Sort - Shuffling the array
+        const randomSortedNumbers = numbers.slice().sort(() => Math.random() - 0.5);
+        document.write("Random Sort: " + randomSortedNumbers.join(", ") + "<br>");
+
+        // Custom Min and Max Functions
+        function customMin(arr) {
+            return arr.reduce((min, val) => (val < min ? val : min), arr[0]);
+        }
+
+        function customMax(arr) {
+            return arr.reduce((max, val) => (val > max ? val : max), arr[0]);
+        }
+
+        document.write("Custom Min: " + customMin(numbers) + "<br>");
+        document.write("Custom Max: " + customMax(numbers) + "<br>");
+    </script>
+</body>
+</html>
