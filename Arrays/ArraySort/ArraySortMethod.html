@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic of Array Sort Method</title>
+</head>
+<body>
+    <h1>Array Basic Sort</h1>
+
+    <script>
+        const arraySort = ["Vishal", "Harbhau", "Jagdhane"];
+        document.write("Without Sorted Array Sort Method - " + arraySort.join(", ") + "<br>");
+
+        const sortedArray = arraySort.slice().sort(); // Use slice() to avoid mutating the original array
+        document.write("Sorted Array using Sort Method - " + sortedArray.join(", ") + "<br>");
+
+        // Check if the sorted array matches the expected sorted order
+        if (sortedArray[0] === "Harbhau" && sortedArray[1] === "Jagdhane" && sortedArray[2] === "Vishal") {
+            document.write("It's Correctly Sorted Array Sort Method - " + sortedArray.join(", ") + "<br>");
+        } else {
+            document.write("It's Wrongly Sorted Array Sort Method - " + sortedArray.join(", ") + "<br>");
+        }
+
+        console.log(sortedArray);
+    </script>
+</body>
+</html>

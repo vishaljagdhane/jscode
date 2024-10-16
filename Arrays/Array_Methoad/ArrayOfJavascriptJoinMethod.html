@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Of Object Join Method</title>
+</head>
+<body>
+    <h1>ऑब्जेक्टच्या अ‍ॅरे जोडण्याची पद्धत</h1>
+
+    <script>
+        const arrayOfObject = [
+            { name: 'Vishal', age: 29 },
+            { name: 'Haribhau', age: 28 },
+            { name: 'Jagdhane', age: 30 }
+        ];
+        const array = ["Vishal", "Haribhau", "Jagdhane"];
+        
+        // ऑब्जेक्टच्या अ‍ॅरेमधील माहिती जोडणे
+        const joinedArray = arrayOfObject.map(obj => `${obj.name} - ${obj.age}`).join(', ');
+        document.write(joinedArray + "<br>");
+        
+        // नावे जोडणे
+        const joinedNames = array.join(', ');
+        document.write(joinedNames);
+    </script>
+    
+</body>
+</html>

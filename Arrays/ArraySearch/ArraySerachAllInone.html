@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Searching Methods</title>
+</head>
+<body>
+    <h1>अ‍ॅरे शोधण्याच्या पद्धतींचा उदाहरण</h1>
+
+    <script>
+        const fruits = ['Apple', 'Banana', 'Cherry', 'Date', 'Fig', 'Grape'];
+
+        // 1. indexOf - 'Cherry' चा अनुक्रमांक शोधा
+        const cherryIndex = fruits.indexOf('Cherry');
+        console.log(`Cherry चा अनुक्रमांक: ${cherryIndex}`); // Output: 2
+
+        // 2. includes - तपासा की 'Banana' अ‍ॅरेमध्ये आहे का
+        const hasBanana = fruits.includes('Banana');
+        console.log(`Banana समाविष्ट आहे: ${hasBanana}`); // Output: true
+
+        // 3. find - 4 हून अधिक अक्षरे असलेला पहिला फल शोधा
+        const longFruit = fruits.find(fruit => fruit.length > 4);
+        console.log(`4 हून अधिक अक्षरे असलेला पहिला फल: ${longFruit}`); // Output: Banana
+
+        // 4. findIndex - 4 हून अधिक अक्षरे असलेला पहिला फलाचा अनुक्रमांक शोधा
+        const longFruitIndex = fruits.findIndex(fruit => fruit.length > 4);
+        console.log(`4 हून अधिक अक्षरे असलेला पहिला फलाचा अनुक्रमांक: ${longFruitIndex}`); // Output: 1
+        document.write(longFruitIndex)
+        // 5. filter - 'G' ने सुरू होणारे सर्व फल मिळवा
+        const gFruits = fruits.filter(fruit => fruit.startsWith('G'));
+        console.log(`'G' ने सुरू होणारे फल: ${gFruits}`); // Output: 
+        document.write(gFruits)
+    </script>
+    
+</body>
+</html>
