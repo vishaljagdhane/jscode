@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Foreach Method</title>
+</head>
+<body>
+    <h1>Array For Each Using Exmaple </h1>
+
+    <script>
+        const array=[1,2,3,4,5]
+        array.forEach(element => {
+            console.log(element)
+        });
+        const ForeachArray =["Vishal","Haribhau ","Jagdhane","Auranabad"]
+let text="";
+ForeachArray.forEach(myFunctions)
+document.write(text)
+function myFunctions(values,index,array){
+    text+=`<li>${index+1}. ${values}</li>`
+
+}
+
+    </script>
+</body>
+</html>
