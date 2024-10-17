@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Filter Method Using The Filter Method</title>
+</head>
+<body>
+    <h1>Array Filter Method!</h1>
+
+    <script>
+        // मूल अरेमध्ये पार्श्वभूमीच्या अन्वेषणासाठी 'filter' पद्धतीचा वापर
+        const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const filteredArray = array.filter(value => value % 2 === 0);
+        console.log(filteredArray); // Output: [2, 4, 6, 8, 10]
+
+        const arrayFilter = ["Vishal", "Haribhau", "Jagdhane", "Aurangabad"];
+        const arrayOverSample = arrayFilter.filter(MyFunction);
+        document.write(arrayOverSample.join(', ')); // Output names as a comma-separated string
+
+        // 'MyFunction' हे एक फ़िल्टर फंक्शन आहे
+        function MyFunction(value) {
+            // तपासणी करणे
+            if (value === arrayFilter[0]) { // Check if value is the first element
+                document.write("<p>Condition is true for: " + value + "</p>");
+                return true; // समाविष्ट करा
+            } else {
+                document.write("<p>Condition is false for: " + value + "</p>");
+                return false; // समाविष्ट करू नका
+            }
+        }
+    </script>
+
+    <p>This array contains names filtered by the condition.</p>
+</body>
+</html>

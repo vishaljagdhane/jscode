@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Reduce Method Examples</title>
+</head>
+<body>
+    <h1>Array Reduce Method Examples</h1>
+
+    <script>
+        // 1. संख्यांची बेरीज
+        const numbers = [45, 4, 9, 16, 25];
+        let sum = numbers.reduce(myFunction);
+        document.write("Numbers sum: " + sum + "<br>");
+
+        // 'myFunction' वापरून संख्यांची बेरीज करण्यासाठी
+        function myFunction(total, value) {
+            return total + value; // एकूण मूल्य वाढवणे
+        }
+
+        // 2. संख्यांची गुणाकार
+        const numsForProduct = [1, 2, 3, 4, 5];
+        let product = numsForProduct.reduce((total, value) => total * value, 1);
+        document.write("Product of numbers: " + product + "<br>");
+
+        // 3. वस्तूंची नावे एकत्र करणे
+        const names = ["Rahul", "Sneha", "Amit"];
+        let concatenatedNames = names.reduce((total, value) => total + " " + value);
+        document.write("Concatenated names: " + concatenatedNames.trim() + "<br>");
+
+        // 4. सर्व्ह संख्यांचा सर्वात मोठा घटक शोधणे
+        const moreNumbers = [3, 5, 1, 8, 2];
+        let maxNumber = moreNumbers.reduce((max, value) => (value > max ? value : max), moreNumbers[0]);
+        document.write("Maximum number: " + maxNumber + "<br>");
+
+        // 5. प्रत्येक वस्तूसाठी एक वस्तू संख्या मोजणे
+        const fruits = ["apple", "banana", "apple", "orange", "banana"];
+        const fruitCount = fruits.reduce((count, fruit) => {
+            count[fruit] = (count[fruit] || 0) + 1; // वस्तू मोजणे
+            return count;
+        }, {});
+        document.write("Fruit counts: " + JSON.stringify(fruitCount) + "<br>");
+    </script>
+</body>
+</html>

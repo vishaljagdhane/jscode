@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Every Example</title>
+</head>
+<body>
+    <h1>Array of Every Examples Using the Array Method</h1>
+
+    <script>
+        // 1. संख्यांची अरे तयार करणे
+        const numbers = [45, 4, 9, 16, 25];
+
+        // 2. 'every' पद्धती वापरून सर्व संख्या 18 पेक्षा मोठ्या आहेत का ते तपासणे
+        let allOver18 = numbers.every(myFunction);
+
+        // 3. निकाल प्रदर्शित करणे
+        document.write(allOver18); // true किंवा false प्रदर्शित करेल
+
+        // 4. तपासणीसाठी फंक्शन परिभाषित करणे
+        function myFunction(value, index, array) {
+            // 5. मूल्य 18 पेक्षा मोठे आहे का हे तपासणे
+            return value < 100; // जर value 18 पेक्षा मोठे असेल, तर true परत करेल
+        }
+    </script>
+</body>
+</html>
