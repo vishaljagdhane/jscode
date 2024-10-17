@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Keys Method Example</title>
+</head>
+<body>
+    <h1>Array Keys Method Example</h1>
+
+    <script>
+        // 1. संख्यांची अरे तयार करणे
+        const numbers = [10, 20, 30, 40, 50];
+
+        // 2. अरेच्या कीज मिळवण्यासाठी Array.keys पद्धतीचा वापर करणे
+        const keys = Array.from(numbers.keys());
+
+        // 3. अरेतील कीज प्रदर्शित करणे
+        document.write("Keys of the array: " + keys.join(', ') + "<br>");
+
+        // 4. कीज सह अरेवर लूप चालवणे
+        document.write("Keys and values:<br>");
+        for (let key of keys) {
+            document.write("Key: " + key + ", Value: " + numbers[key] + "<br>");
+        }
+    </script>
+</body>
+</html>

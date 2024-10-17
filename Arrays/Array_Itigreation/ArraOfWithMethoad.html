@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Fill Method Example</title>
+</head>
+<body>
+    <h1>Array Fill Method Example</h1>
+
+    <script>
+        // 1. Array.fill पद्धतीचा वापर करून एक नवीन अरे तयार करणे
+        const filledArray = new Array(5).fill(0); // 5 आकाराचा अरे तयार करणे आणि सर्व घटक 0 ने भरणे
+
+        // 2. भरलेली अरे प्रदर्शित करणे
+        document.write("Filled Array: " + filledArray.join(', ') + "<br>");
+
+        // 3. दुसरा उदाहरण: Array.fill पद्धतीचा वापर करून विशिष्ट स्थानावर मूल्य भरणे
+        const customArray = [1, 2, 3, 4, 5];
+        customArray.fill(10, 2, 4); // index 2 पासून 4 पर्यंत (4 समाविष्ट नाही) 10 ने भरले
+
+        // 4. अद्यतनित अरे प्रदर्शित करणे
+        document.write("Updated Custom Array: " + customArray.join(', ') + "<br>");
+    </script>
+</body>
+</html>

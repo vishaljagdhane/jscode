@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array From Method Example</title>
+</head>
+<body>
+    <h1>Array From Method Example</h1>
+
+    <script>
+        // 1. Array.from पद्धतीचा वापर करून स्ट्रिंगपासून अरे तयार करणे
+        const str = "Hello";
+        
+        // 2. स्ट्रिंगमधील प्रत्येक अक्षराचे अरेमध्ये रूपांतर
+        const arrFromStr = Array.from(str);
+
+        // 3. अरे प्रदर्शित करणे
+        document.write("Array from string: " + arrFromStr.join(', ') + "<br>");
+
+        // 4. एक उदाहरण जिथे Array.from पद्धत वापरून संख्या अरे तयार करणे
+        const numbers = [1, 2, 3, 4, 5];
+        
+        // 5. प्रत्येक संख्येवर 2 चा गुणाकार करून नवीन अरे तयार करणे
+        const multipliedByTwo = Array.from(numbers, x => x * 2);
+
+        // 6. गुणाकार केलेल्या अरे प्रदर्शित करणे
+        document.write("Numbers multiplied by 2: " + multipliedByTwo.join(', ') + "<br>");
+    </script>
+</body>
+</html>

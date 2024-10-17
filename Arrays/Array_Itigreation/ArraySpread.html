@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Spread Method Example</title>
+</head>
+<body>
+    <h1>This Array is Spread Array Using Multiple Arrays Connected</h1>
+  
+    <script>
+        // 1. चार तिमाहींसाठी अरे तयार करणे
+        const q1 = ["Jan", "Feb", "Mar"];
+        const q2 = ["Apr", "May", "Jun"];
+        const q3 = ["Jul", "Aug", "Sep"];
+        const q4 = ["Oct", "Nov", "Dec"];
+
+        // 2. सर्व तिमाही एकत्र करून एक नवीन अरे तयार करणे
+        const spreadArray = [...q1, ...q2, ...q3, ...q4];
+
+        // 3. document.write चा वापर करून अरे प्रदर्शित करणे
+        document.write("<ul>");
+        
+        // 4. 'for' लूप वापरून अरेवरील प्रत्येक घटक प्रदर्शित करणे
+        for (let i = 0; i < spreadArray.length; i++) {
+            document.write(`<li>Array Index ${i + 1}: Spread Array ${spreadArray[i]}</li>`);
+        }
+        
+        document.write("</ul>");
+
+        // 5. 'map' पद्धत वापरून अरेवर लूप चालवणे
+        const mappedArray = spreadArray.map((value, index) => {
+            return `<li>Array Index ${index + 1}: Spread Array ${value}</li>`;
+        });
+
+        // 6. mappedArray चा वापर करून प्रदर्शित करणे
+        document.write("<ul>" + mappedArray.join('') + "</ul>");
+    </script>
+</body>
+</html>

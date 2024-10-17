@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Entries Method Example</title>
+</head>
+<body>
+    <h1>Array Entries Method Example</h1>
+
+    <script>
+        // 1. संख्यांची अरे तयार करणे
+        const numbers = [10, 20, 30, 40, 50];
+
+        // 2. अरेच्या की/मूल्य जोडींसाठी Array.entries पद्धतीचा वापर करणे
+        const entries = numbers.entries();
+
+        // 3. जोडी दर्शवण्यासाठी लूप चालवणे
+        document.write("Array entries:<br>");
+        for (let entry of entries) {
+            // 4. प्रत्येक जोडी प्रदर्शित करणे
+            document.write("Key: " + entry[0] + ", Value: " + entry[1] + "<br>");
+        }
+    </script>
+</body>
+</html>
