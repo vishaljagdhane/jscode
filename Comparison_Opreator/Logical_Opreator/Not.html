@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical NOT Operator (!) Examples</title>
+</head>
+<body>
+
+<h1>JavaScript Logical NOT Operator (!)</h1>
+<h2>Examples of Logical NOT Operator</h2>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+<script>
+    // उदाहरण 1: साधा boolean मूल्य
+    const a = true;
+    document.getElementById("demo1").innerHTML = "उदाहरण 1: !true: " + !a; // false
+
+    // उदाहरण 2: false ची नकारात्मकता
+    const b = false;
+    document.getElementById("demo2").innerHTML = "उदाहरण 2: !false: " + !b; // true
+
+    // उदाहरण 3: संख्या
+    const c = 0; // 0 हा falsy मान आहे
+    document.getElementById("demo3").innerHTML = "उदाहरण 3: !0: " + !c; // true
+
+    // उदाहरण 4: नकारात्मक संख्या
+    const d = -5; // नकारात्मक संख्या truthy मान आहे
+    document.getElementById("demo4").innerHTML = "उदाहरण 4: !-5: " + !d; // false
+
+    // उदाहरण 5: रिक्त स्ट्रिंग
+    const e = ""; // रिक्त स्ट्रिंग falsy मान आहे
+    document.getElementById("demo5").innerHTML = "उदाहरण 5: !'': " + !e; // true
+</script>
+
+<!-- Marathi Comments -->
+<!-- 
+    ! (नॉट) ऑपरेटर एका मूल्याची नकारात्मकता दर्शवतो.
+    जर दिलेले मूल्य सत्य (true) असेल तर तो false परत करतो,
+    अन्यथा true परत करतो.
+    उदाहरणे दर्शवितात की कसे विविध परिस्थितींमध्ये हा ऑपरेटर कार्य करतो.
+-->
+
+</body>
+</html>

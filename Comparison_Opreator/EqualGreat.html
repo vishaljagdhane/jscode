@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Less Than or Equal To Operator (<=)</title>
+</head>
+<body>
+
+<h1>JavaScript Less Than or Equal To Operator (<=)</h1>
+<h2>Examples of Less Than or Equal To Operator</h2>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+<script>
+    // उदाहरण 1: साधी तुलना
+    const a = 5;
+    const b = 10;
+    document.getElementById("demo1").innerHTML = "उदाहरण 1: 5 <= 10: " + (a <= b); // true
+
+    // उदाहरण 2: समान मूल्ये
+    const c = 7;
+    document.getElementById("demo2").innerHTML = "उदाहरण 2: 7 <= 7: " + (c <= c); // true
+
+    // उदाहरण 3: भिन्न मूल्ये
+    const d = 12;
+    document.getElementById("demo3").innerHTML = "उदाहरण 3: 10 <= 12: " + (b <= d); // true
+
+    // उदाहरण 4: नकारात्मक संख्या
+    const e = -3;
+    document.getElementById("demo4").innerHTML = "उदाहरण 4: 0 <= -3: " + (0 <= e); // false
+
+    // उदाहरण 5: संख्यात्मक स्ट्रिंग
+    const f = "5"; // स्ट्रिंग
+    document.getElementById("demo5").innerHTML = "उदाहरण 5: 5 <= '5': " + (a <= f); // true
+</script>
+
+<!-- Marathi Comments -->
+<!-- 
+    <= ऑपरेटर दोन संख्यांची तुलना करतो. 
+    जर पहिला नंबर दुसऱ्या नंबरपेक्षा कमी किंवा समान असेल, तर तो true परत करतो, 
+    अन्यथा false परत करतो.
+    उदाहरणे दर्शवितात की कसे विविध परिस्थितींमध्ये हा ऑपरेटर कार्य करतो.
+-->
+
+</body>
+</html>

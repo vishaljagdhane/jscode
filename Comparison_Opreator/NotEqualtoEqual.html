@@ -1,0 +1,46 @@
+<html>
+<body>
+
+<h1>JavaScript तुलना</h1>
+<h2>!== ऑपरेटर</h2>
+
+<p>x मध्ये 5 असाइन करा आणि तुलना (x !== 5) चे मूल्य दर्शवा:</p>
+
+<p id="demo"></p>
+
+<script>
+    // JavaScript भाग:
+    // <script> टॅगमध्ये JavaScript कोड आहे जो वेबपेज लोड झाल्यावर कार्यान्वित होतो.
+    let x = 5; // या वाक्यात x मध्ये 5 मूल्य असाइन केले जाते.
+    
+    // document.getElementById("demo").innerHTML = (x !== 5); या वाक्यात तुलना केली जाते:
+    document.getElementById("demo").innerHTML = (x !== 5); 
+    // !== ऑपरेटर तपासतो की x हे 5 नाही का आणि त्यांचा प्रकारही भिन्न आहे का. 
+    // कारण x हे 5 आहे, त्यामुळे x !== 5 चा परिणाम false आहे.
+
+    // उदाहरणे
+    // उदाहरण 1: समान मूल्ये आणि प्रकार
+    const a = 10;
+    const b = 10;
+    console.log("उदाहरण 1: Is a !== b? " + (a !== b)); // false
+
+    // उदाहरण 2: भिन्न मूल्ये
+    const c = 20;
+    console.log("उदाहरण 2: Is a !== c? " + (a !== c)); // true
+
+    // उदाहरण 3: भिन्न प्रकार
+    const d = "10";
+    console.log("उदाहरण 3: Is a !== d? " + (a !== d)); // true
+
+    // उदाहरण 4: बूलियन मूल्य
+    const e = true;
+    console.log("उदाहरण 4: Is a !== e? " + (a !== e)); // true
+
+    // उदाहरण 5: ऑब्जेक्ट तुलना
+    const obj1 = { name: "Alice" };
+    const obj2 = { name: "Alice" };
+    console.log("उदाहरण 5: Is obj1 !== obj2? " + (obj1 !== obj2)); // true
+</script>
+
+</body>
+</html>

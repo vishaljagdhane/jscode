@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>== Equal To Comparison</title>
+</head>
+<body>
+    <h1>Comparison: Equal To (==) Operator</h1>
+    <p>Comparison Equal To म्हणजे दोन मूल्ये एकसमान आहेत का ते तपासण्यासाठी वापरला जाणारा ऑपरेटर. हे खरे (true) किंवा खोटे (false) परत करते.</p>
+    
+    <script>
+        // Example 1: Number and String Comparison
+        let x = 10;
+        let y = '10'; // String type
+        let xx=10;
+        // Using == operator
+        document.write(x==xx)
+        let result1 = (x == y); // This will return true due to type coercion
+        document.write("X आणि Y सारखे आहेत का? " + result1 + "<br>"); // Output: true
+
+        // Example 2: Boolean and Number Comparison
+        let a = 1; // Number
+        let b = true; // Boolean (true is coerced to 1)
+        
+        let result2 = (a == b); // This will return true
+        document.write("A आणि B सारखे आहेत का? " + result2 + "<br>"); // Output: true
+
+        // Example 3: Different Data Types
+        let c = null;
+        let d = undefined;
+        
+        let result3 = (c == d); // This will return true, as null == undefined
+        document.write("C आणि D सारखे आहेत का? " + result3 + "<br>"); // Output: true
+
+        // Example 4: Object and Primitive Comparison
+        let obj = { value: 10 };
+        let primitive = 10;
+
+        let result4 = (obj == primitive); // This will return false
+        document.write("Object आणि Primitive सारखे आहेत का? " + result4 + "<br>"); // Output: false
+    </script>
+    
+    <!-- Marathi Comment -->
+    <!-- == ऑपरेटर दोन मूल्यांची तुलना करतो. हे फक्त मूल्ये समान आहेत का ते तपासते, डेटा प्रकाराची पर्वा न करता. -->
+</body>
+</html>
