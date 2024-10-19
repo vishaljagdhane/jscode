@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!= Not Equal To</title>
+</head>
+<body>
+    <h1>!= Not Equal To Operator</h1>
+    <h2>Examples of Not Equal To in JavaScript</h2>
+    
+    <script>
+        // Example 1: Basic Comparison
+        const a = 5;
+        const b = 10;
+        const result1 = b != a; // true because 5 is not equal to 10
+        console.log("Example 1: Is a != b? " + result1); // Output: true
+
+        // Example 2: Comparing Different Types
+        const c = "5";
+        const d = 5;
+        const result2 = c != d; // false because "5" is coerced to 5
+        console.log("Example 2: Is c != d? " + result2); // Output: false
+
+        // Example 3: String Comparison
+        const e = "Hello";
+        const f = "World";
+        const result3 = e != f; // true because "Hello" is not equal to "World"
+        console.log("Example 3: Is e != f? " + result3); // Output: true
+
+        // Example 4: Boolean Comparison
+        const g = true;
+        const h = false;
+        const result4 = g != h; // true because true is not equal to false
+        console.log("Example 4: Is g != h? " + result4); // Output: true
+
+        // Example 5: Object Comparison
+        const obj1 = { name: "Alice" };
+        const obj2 = { name: "Alice" };
+        const result5 = obj1 != obj2; // true because they are different object references
+        console.log("Example 5: Is obj1 != obj2? " + result5); // Output: true
+    </script>
+
+    <!-- Marathi Comments -->
+    <!-- 
+        != ऑपरेटर दोन मूल्यांची तुलना करतो. 
+        उदाहरण 1: a आणि b यांची तुलना केली जाते, म्हणून 5 != 10 हे खरे (true) आहे. 
+        उदाहरण 2: "5" आणि 5 यांची तुलना केली जाते, कारण "5" संख्या 5 मध्ये रूपांतरित होते, त्यामुळे 5 != 5 हे खोटे (false) आहे.
+        उदाहरण 3: "Hello" आणि "World" यांची तुलना केली जाते, त्यामुळे ते वेगळे आहेत, म्हणून हे खरे (true) आहे.
+        उदाहरण 4: true आणि false यांची तुलना केली जाते, म्हणून ते वेगळे आहेत, त्यामुळे हे खरे (true) आहे.
+        उदाहरण 5: दोन वस्तू (objects) वेगवेगळ्या संदर्भांमध्ये आहेत, त्यामुळे त्यांची तुलना केली जाते आणि हे खरे (true) आहे.
+    -->
+</body>
+</html>

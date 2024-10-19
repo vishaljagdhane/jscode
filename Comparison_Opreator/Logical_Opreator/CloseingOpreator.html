@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish Coalescing Operator (??) Examples</title>
+</head>
+<body>
+
+<h1>JavaScript Nullish Coalescing Operator (??)</h1>
+<h2>Examples of Nullish Coalescing Operator</h2>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+<script>
+    // उदाहरण 1: null चा वापर
+    const a = null;
+    document.getElementById("demo1").innerHTML = "उदाहरण 1: null ?? 'डिफॉल्ट मूल्य': " + (a ?? 'डिफॉल्ट मूल्य'); // 'डिफॉल्ट मूल्य'
+
+    // उदाहरण 2: undefined चा वापर
+    const b = undefined;
+    document.getElementById("demo2").innerHTML = "उदाहरण 2: undefined ?? 'डिफॉल्ट मूल्य': " + (b ?? 'डिफॉल्ट मूल्य'); // 'डिफॉल्ट मूल्य'
+
+    // उदाहरण 3: खरे मूल्य
+    const c = 0; // 0 हा falsy मान आहे परंतु null किंवा undefined नाही
+    document.getElementById("demo3").innerHTML = "उदाहरण 3: 0 ?? 'डिफॉल्ट मूल्य': " + (c ?? 'डिफॉल्ट मूल्य'); // 0
+
+    // उदाहरण 4: रिक्त स्ट्रिंग
+    const d = ""; // रिक्त स्ट्रिंग null किंवा undefined नाही
+    document.getElementById("demo4").innerHTML = "उदाहरण 4: '' ?? 'डिफॉल्ट मूल्य': " + (d ?? 'डिफॉल्ट मूल्य'); // ''
+
+    // उदाहरण 5: सत्य मान
+    const e = false; // false हा falsy मान आहे परंतु null किंवा undefined नाही
+    document.getElementById("demo5").innerHTML = "उदाहरण 5: false ?? 'डिफॉल्ट मूल्य': " + (e ?? 'डिफॉल्ट मूल्य'); // false
+</script>
+
+<!-- Marathi Comments -->
+<!-- 
+    ?? (नलिश कोअलेसिंग) ऑपरेटर null किंवा undefined ची चाचणी करतो.
+    जर डाव्या बाजूला दिलेले मूल्य null किंवा undefined असेल, तर 
+    तो उजव्या बाजूचे मूल्य परत करतो; अन्यथा तो डाव्या बाजूचे मूल्य परत करतो.
+    उदाहरणे दर्शवितात की कसे विविध परिस्थितींमध्ये हा ऑपरेटर कार्य करतो.
+-->
+
+</body>
+</html>

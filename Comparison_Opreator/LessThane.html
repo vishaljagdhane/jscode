@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Less Than (<) and Less Than or Equal To (<=) Operators</title>
+</head>
+<body>
+
+<h1>JavaScript Less Than (<) and Less Than or Equal To (<=) Operators</h1>
+<h2>Examples of Less Than Operator</h2>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+<h2>Examples of Less Than or Equal To Operator</h2>
+
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+
+<script>
+    // उदाहरण 1: साधी तुलना (<)
+    const a = 5;
+    const b = 10;
+    document.getElementById("demo1").innerHTML = "उदाहरण 1: 5 < 10: " + (a < b); // true
+
+    // उदाहरण 2: समान मूल्य
+    const c = 10;
+    document.getElementById("demo2").innerHTML = "उदाहरण 2: 10 < 10: " + (c < c); // false
+
+    // उदाहरण 3: भिन्न मूल्ये
+    const d = 12;
+    document.getElementById("demo3").innerHTML = "उदाहरण 3: 5 < 12: " + (a < d); // true
+
+    // उदाहरण 4: नकारात्मक संख्या
+    const e = -3;
+    document.getElementById("demo4").innerHTML = "उदाहरण 4: 0 < -3: " + (0 < e); // false
+
+    // उदाहरण 5: संख्यात्मक स्ट्रिंग
+    const f = "7";
+    document.getElementById("demo5").innerHTML = "उदाहरण 5: 5 < '7': " + (a < f); // true
+
+    // उदाहरण 6: साधी तुलना (<=)
+    document.getElementById("demo6").innerHTML = "उदाहरण 6: 5 <= 10: " + (a <= b); // true
+
+    // उदाहरण 7: समान मूल्ये
+    document.getElementById("demo7").innerHTML = "उदाहरण 7: 10 <= 10: " + (c <= c); // true
+
+    // उदाहरण 8: भिन्न मूल्ये
+    document.getElementById("demo8").innerHTML = "उदाहरण 8: 10 <= 12: " + (c <= d); // true
+
+    // उदाहरण 9: नकारात्मक संख्या
+    document.getElementById("demo9").innerHTML = "उदाहरण 9: 0 <= -3: " + (0 <= e); // false
+
+    // उदाहरण 10: संख्यात्मक स्ट्रिंग
+    document.getElementById("demo10").innerHTML = "उदाहरण 10: 5 <= '5': " + (a <= f); // true
+</script>
+
+<!-- Marathi Comments -->
+<!-- 
+    < (लेस थान) आणि <= (लेस थान ऑर इक्वल) ऑपरेटर दोन संख्यांची तुलना करतात. 
+    < ऑपरेटर पहिला नंबर दुसऱ्या नंबरपेक्षा क

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Functions</title>
+</head>
+<body>
+    <script>
+        // तारीख संबंधित कार्यक्षमता प्रदर्शित करण्यासाठी JavaScript चा वापर
+        // Date ऑब्जेक्ट तयार करणे
+        const currentDate = new Date(); // सद्य तारीख आणि वेळ मिळवतो
+        document.write("सद्य तारीख आणि वेळ: " + currentDate + "<br>");
+
+        // वर्ष, महिना आणि दिवस प्राप्त करणे
+        const year = currentDate.getFullYear(); // पूर्ण वर्ष
+        const month = currentDate.getMonth() + 1; // महिना (0 पासून सुरू)
+        const day = currentDate.getDate(); // दिवस
+        document.write("सद्य वर्ष: " + year + "<br>");
+        document.write("सद्य महिना: " + month + "<br>");
+        document.write("सद्य दिवस: " + day + "<br>");
+
+        // तारीखमध्ये काही दिवस जोडणे
+        currentDate.setDate(currentDate.getDate() + 5); // 5 दिवस जोडणे
+        document.write("5 दिवसांनी तारीख: " + currentDate + "<br>");
+
+        // तारीखमध्ये काही महिने जोडणे
+        currentDate.setMonth(currentDate.getMonth() + 2); // 2 महिने जोडणे
+        document.write("2 महिने जोडल्यावर तारीख: " + currentDate + "<br>");
+
+        // तारीखमधून वर्ष, महिना आणि दिवस काढणे
+        const extractedYear = currentDate.getFullYear();
+        const extractedMonth = currentDate.getMonth() + 1; // महिना
+        const extractedDay = currentDate.getDate(); // दिवस
+        document.write("काढलेले वर्ष: " + extractedYear + "<br>");
+        document.write("काढलेला महिना: " + extractedMonth + "<br>");
+        document.write("काढलेला दिवस: " + extractedDay + "<br>");
+
+        // सर्व तारीख डेटा एकत्रित करणे
+        document.write("तारीख (YYYY-MM-DD): " + extractedYear + "-" + extractedMonth + "-" + extractedDay + "<br>");
+    
+    const d = new Date(2025,11,4)
+    document.write("This Is The Date ",d)
+    </script>
+</body>
+</html>

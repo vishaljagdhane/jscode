@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical OR Operator (||) Examples</title>
+</head>
+<body>
+
+<h1>JavaScript Logical OR Operator (||)</h1>
+<h2>Examples of Logical OR Operator</h2>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+<script>
+    // उदाहरण 1: साधी तुलना
+    const a = 5;
+    const b = 10;
+    document.getElementById("demo1").innerHTML = "उदाहरण 1: (5 > 10) || (5 < 10): " + ((a > b) || (a < b)); // true
+
+    // उदाहरण 2: समान मूल्ये
+    const c = 7;
+    document.getElementById("demo2").innerHTML = "उदाहरण 2: (7 < 7) || (7 == 7): " + ((c < c) || (c == 7)); // true
+
+    // उदाहरण 3: एक खोटी आणि एक खरी अट
+    const d = 0;
+    document.getElementById("demo3").innerHTML = "उदाहरण 3: (0 < -1) || (0 >= 0): " + ((0 < -1) || (d >= 0)); // true
+
+    // उदाहरण 4: दोन्ही खोटी तुलना
+    const e = 15;
+    document.getElementById("demo4").innerHTML = "उदाहरण 4: (15 < 10) || (15 < 5): " + ((e < 10) || (e < 5)); // false
+
+    // उदाहरण 5: संख्यात्मक स्ट्रिंग
+    const f = "20"; // स्ट्रिंग
+    document.getElementById("demo5").innerHTML = "उदाहरण 5: (15 < f) || (f < 30): " + ((15 < f) || (f < 30)); // true
+</script>
+
+<!-- Marathi Comments -->
+<!-- 
+    || (ऑर) ऑपरेटर दोन अटींची तुलना करतो.
+    जर कोणतीही एक अट सत्य (true) असेल, तर तो true परत करतो,
+    अन्यथा false परत करतो.
+    उदाहरणे दर्शवितात की कसे विविध परिस्थितींमध्ये हा ऑपरेटर कार्य करतो.
+-->
+
+</body>
+</html>

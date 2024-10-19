@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math.random() Example</title>
+</head>
+<body>
+    <h1>Math.random() चा वापर</h1>
+    <div id="results"></div>
+
+    <script>
+        const resultsDiv = document.getElementById("results");
+
+        // Math.random() वापरून 0 आणि 1 दरम्यान एक यादृच्छिक संख्या तयार करणे
+        const randomNumber = Math.random();
+
+        // यादृच्छिक संख्येची प्रदर्शनी
+        resultsDiv.innerHTML += `<p>Math.random() चा परिणाम: ${randomNumber}</p>`;
+
+        // 1 ते 100 दरम्यान एक यादृच्छिक पूर्णांक मिळवणे
+        const randomInteger = Math.floor(Math.random() * 100) + 1; // 1 ते 100
+        resultsDiv.innerHTML += `<p>1 ते 100 दरम्यान एक यादृच्छिक पूर्णांक: ${randomInteger}</p>`;
+    </script>
+</body>
+</html>

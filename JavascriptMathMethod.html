@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript मधील Math Functions</title>
+</head>
+<body>
+    <h1>JavaScript मधील Math Functions काय आहेत</h1>
+
+    <div id="results"></div>
+
+    <script>
+        const resultsDiv = document.getElementById("results");
+
+        // 1. Math.PI
+        resultsDiv.innerHTML += `<p>Math.PI: ${Math.PI}</p>`; // π (Pi)
+
+        // 2. Math.abs()
+        resultsDiv.innerHTML += `<p>Math.abs(-5): ${Math.abs(-5)}</p>`; // Absolute value म्हणजे संख्या चा सकारात्मक मूल्य
+
+        // 3. Math.ceil()
+        resultsDiv.innerHTML += `<p>Math.ceil(4.2): ${Math.ceil(4.2)}</p>`; // 4.2 चा वरच्या कडील पूर्णांकात गोल करणे (5)
+
+        // 4. Math.floor()
+        resultsDiv.innerHTML += `<p>Math.floor(4.9): ${Math.floor(4.9)}</p>`; // 4.9 चा खालच्या कडील पूर्णांकात गोल करणे (4)
+
+        // 5. Math.round()
+        resultsDiv.innerHTML += `<p>Math.round(4.5): ${Math.round(4.5)}</p>`; // 4.5 चा जवळच्या पूर्णांकात गोल करणे (5)
+
+        // 6. Math.max() आणि Math.min()
+        resultsDiv.innerHTML += `<p>Math.max(1, 3, 2): ${Math.max(1, 3, 2)}</p>`; // सर्वांत मोठा मूल्य (3)
+        resultsDiv.innerHTML += `<p>Math.min(1, 3, 2): ${Math.min(1, 3, 2)}</p>`; // सर्वांत लहान मूल्य (1)
+
+        // 7. Math.random()
+        resultsDiv.innerHTML += `<p>Math.random(): ${Math.random()}</p>`; // 0 आणि 1 दरम्यान एक यादृच्छिक संख्या
+
+        // 8. Math.pow()
+        resultsDiv.innerHTML += `<p>Math.pow(2, 3): ${Math.pow(2, 3)}</p>`; // 2 चा 3 वर काढलेला घातांक (8)
+
+        // 9. Math.sqrt()
+        resultsDiv.innerHTML += `<p>Math.sqrt(16): ${Math.sqrt(16)}</p>`; // 16 चा वर्गमुळ (4)
+
+        // 10. Math.abs() चा वापर करून अ‍ॅरे
+        const numbers = [-10, -5, 0, 5, 10];
+        const absoluteValues = numbers.map(num => Math.abs(num));
+        resultsDiv.innerHTML += `<p>Absolute values: ${absoluteValues.join(', ')}</p>`; // अ‍ॅरेतील सर्व संख्यांचे सकारात्मक मूल्य
+    </script>
+</body>
+</html>
