@@ -5,6 +5,11 @@ body {
     color: black; /* Change text color to black */
     overflow-x: hidden; /* Hide overflow on x-axis */
 }
+.hamburger {
+    display: none; /* Initially hide the hamburger icon */
+    font-size: 24px;
+    cursor: pointer;
+}
 
 .navbar {
     display: flex;
@@ -163,5 +168,34 @@ footer {
 
     .navbar-options {
         flex-direction: column; /* Stack items on mobile */
+    }
+}
+@media (max-width: 768px) {
+    .navbar-options {
+        display: none; /* Hide navbar options by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        background-color: #34495e;
+        width: 100%;
+        top: 60px; /* Adjust according to your navbar height */
+        left: 0;
+        z-index: 999;
+    }
+
+    .navbar-options.active {
+        display: flex; /* Show navbar options when active */
+    }
+
+    .navbar-options li {
+        margin: 10px 0; /* Add margin for better spacing on mobile */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger icon on mobile */
+    }
+
+    .vehicle-card,
+    .service-box {
+        width: calc(100% - 40px);
     }
 }

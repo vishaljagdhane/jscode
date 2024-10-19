@@ -9,6 +9,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar-brand">Sangita Transport</div>
+       
         <ul class="navbar-options">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -16,6 +17,7 @@
             <li><a href="#login">Login</a></li>
             <li><a href="#booking">Booking</a></li>
         </ul>
+        <div class="hamburger" id="hamburger">&#9776;</div>
     </nav>
 
     <div class="hero" id="home">
@@ -110,12 +112,18 @@
     </footer>
 
     <script>
+        const hamburger = document.getElementById('hamburger');
+        const navbarOptions = document.getElementById('navbar-options');
+
+        hamburger.addEventListener('click', () => {
+            navbarOptions.classList.toggle('active');
+        });
+
         document.querySelectorAll('.navbar-options a').forEach(link => {
             link.addEventListener('click', function() {
-                // Remove active class from all links
                 document.querySelectorAll('.navbar-options a').forEach(item => item.classList.remove('active'));
-                // Add active class to the clicked link
                 this.classList.add('active');
+                navbarOptions.classList.remove('active'); // Close menu after clicking
             });
         });
     </script>
