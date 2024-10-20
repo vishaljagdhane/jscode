@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Scope Example</title>
+</head>
+<body>
+    <h1>Loop Scope in JavaScript</h1>
+    <div id="output"></div>
+
+    <script>
+        const outputDiv = document.getElementById("output");
+
+        // Using var
+        var varOutput = "";
+        for (var i = 0; i < 3; i++) {
+            varOutput += "var i: " + i + "<br>";
+        }
+        outputDiv.innerHTML += "<strong>Using var:</strong><br>" + varOutput;
+        outputDiv.innerHTML += "Outside loop, var i: " + i + "<br><br>"; // i is accessible here
+
+        // Using let
+        let letOutput = "";
+        for (let j = 0; j < 3; j++) {
+            letOutput += "let j: " + j + "<br>";
+        }
+        outputDiv.innerHTML += "<strong>Using let:</strong><br>" + letOutput;
+        // Uncommenting the following line will cause an error because j is not defined here
+        // outputDiv.innerHTML += "Outside loop, let j: " + j + "<br><br>"; 
+
+        // Using const
+        const constOutput = [];
+        for (let k = 0; k < 3; k++) {
+            constOutput.push("const k: " + k);
+        }
+        outputDiv.innerHTML += "<strong>Using const:</strong><br>" + constOutput.join("<br>");
+        // Uncommenting the following line will cause an error because k is not defined here
+        // outputDiv.innerHTML += "Outside loop, const k: " + k + "<br><br>"; 
+    </script>
+</body>
+</html>
