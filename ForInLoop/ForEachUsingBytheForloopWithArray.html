@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of For-In Looping ForEach</title>
+</head>
+<body>
+    <h1>ForEach Looping Using an Array</h1>
+    <script>
+        const ArrayOf_Data = ["Vishal", "Haribhau", "Jagdhane", "Pune", "Aurangabad", "Maharashtra"]; // Basic Array of List
+
+        let text = ""; // Initialize text variable
+        ArrayOf_Data.forEach(ForeachArrayofArrayOf);
+
+        function ForeachArrayofArrayOf(value, index, data) {
+            text += value + "<br>"; // Concatenate each value with a line break
+        }
+
+        document.write(text); // Output the final result
+    </script>
+</body>
+</html>

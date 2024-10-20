@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Using For-In Loop</title>
+</head>
+<body>
+    <h1>Object Using For-In Loop</h1>
+
+    <script>
+        const person = {
+            fname: "Vishal",
+            lastName: "Jagdhane",
+            email: "vishal@gmail.com",
+            mobile: 8888882016
+        };
+
+        // Loop through the properties of the person object
+        for (let key in person) {
+            document.write(key + ": " + person[key] + "<br>");
+        }
+    </script>
+</body>
+</html>

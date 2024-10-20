@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic For In Loop</title>
+</head>
+<body>
+    <h1>Basic Of For In Looping</h1>
+
+    <script>
+    const ArrayOf_Data =["vishal","Haribhau","Jagdhane","Pune","Auranagabd","Maharashtra"];//Basic Array of List 
+
+    for(let i in ArrayOf_Data){//using by the for in loop mines  Let i in ArrayOf_Data
+        document.write(ArrayOf_Data[i]+"<br>");// he is pritnig one by one 
+    }
+    const ArrayOf_Data1 =["pooja","vishal ","Jagdhane","Pune","Auranagabd","Mahar"];
+    const spreadArray =[...ArrayOf_Data,...ArrayOf_Data1];
+
+    for(let i in spreadArray){
+        document.write(spreadArray[i]+"<br>");// he is pritnig all data of both arrays together
+    }
+    </script>
+</body>
+</html>
