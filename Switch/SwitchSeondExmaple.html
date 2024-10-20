@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator using Switch Statement</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+
+    <script>
+        let num1 = 10; // पहिला अंक
+        let num2 = 5;  // दुसरा अंक
+        let operator = ""; // तुम्ही याला "-", "*", "/" मध्ये बदलू शकता
+
+        let result; // निकाल साठवण्यासाठी वेरिएबल
+
+        // ऑपरेटरवर आधारित गणितीय क्रिया ठरवण्यासाठी switch स्टेटमेंट
+        switch (operator) {
+            case "+":
+                result = num1 + num2; // बेरीज
+                break;
+            case "-":
+                result = num1 - num2; // वजाबाकी
+                break;
+            case "*":
+                result = num1 * num2; // गुणाकार
+                break;
+            case "/":
+                // शून्यावर विभागणी होणार नाही याची तपासणी
+                if (num2 !== 0) {
+                    result = num1 / num2; // विभागणी
+                } else {
+                    result = "Cannot divide by zero."; // शून्यावर विभागणी करणे शक्य नाही
+                }
+                break;
+            default:
+                result = "Invalid operator."; // चुकीचा ऑपरेटर
+        }
+
+        // निकाल प्रदर्शित करणे
+        document.write("The result is: " + result);
+    </script>
+</body>
+</html>

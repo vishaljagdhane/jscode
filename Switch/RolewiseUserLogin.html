@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role-Based User Login</title>
+</head>
+<body>
+    <h1>Role-Based User Login</h1>
+    <div id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <button id="loginButton">Login</button>
+    </div>
+    <div id="message"></div>
+
+    <script>
+        // Define correct credentials for different roles
+        const users = {
+            admin: { username: "admin", password: "admin123" },
+            user: { username: "user", password: "user123" },
+            guest: { username: "guest", password: "guest123" }
+        };
+
+        let attempts = 0; // Track the number of attempts
+        const maxAttempts = 3; // Maximum allowed attempts
+
+        document.getElementById("loginButton").addEventListener("click", function() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const messageDiv = document.getElementById("message");
+
+            // Check if the user is already blocked
+            if (attempts >= maxAttempts) {
+                messageDiv.innerHTML = "Your account is blocked after 3 failed attempts.";
+                return;
+            }
+
+            // Determine the role based on username and password
+            let role = "";
+            switch (true) {
+                case (username === users.admin.username && password === users.admin.password):
+                    role = "admin";
+                    break;
+                case (username === users.user.username && password === users.user.password):
+                    role = "user";
+                    break;
+                case (username === users.guest.username && password === users.guest.password):
+                    role = "guest";
+                    break;
+                default:
+                    attempts++;
+                    messageDiv.innerHTML = `Invalid username or password. Attempts left: ${maxAttempts - attempts}`;
+                    // Block the user if attempts exceed the limit
+                    if (attempts >= maxAttempts) {
+                        messageDiv.innerHTML = "Your account is blocked after 3 failed attempts.";
+                    }
+                    return; // Exit if login fails
+            }
+
+            // Grant access based on the role
+            switch (role) {
+                case "admin":
+                    messageDiv.innerHTML = "Welcome Admin! You have full access.";
+                    break;
+                case "user":
+                    messageDiv.innerHTML = "Welcome User! You have limited access.";
+                    break;
+                case "guest":
+                    messageDiv.innerHTML = "Welcome Guest! You have minimal access.";
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>

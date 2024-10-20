@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login System</title>
+</head>
+<body>
+    <h1>User Login</h1>
+    <div id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <button id="loginButton">Login</button>
+    </div>
+    <div id="message"></div>
+
+    <script>
+        const correctUsername = "user";
+        const correctPassword = "pass";
+        let attempts = 0; // Number of attempts
+        const maxAttempts = 3; // Maximum allowed attempts
+
+        document.getElementById("loginButton").addEventListener("click", function() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const messageDiv = document.getElementById("message");
+
+            // Check if the user is blocked
+            if (attempts >= maxAttempts) {
+                messageDiv.innerHTML = "Your account is blocked after 3 failed attempts.";
+                return;
+            }
+
+            // Validate username and password
+            if (username === correctUsername && password === correctPassword) {
+                messageDiv.innerHTML = "Login successful! Welcome, " + username + ".";
+            } else {
+                attempts++;
+                messageDiv.innerHTML = "Invalid username or password. Attempts left: " + (maxAttempts - attempts);
+
+                // Block the user if attempts exceed the limit
+                if (attempts >= maxAttempts) {
+                    messageDiv.innerHTML = "Your account is blocked after 3 failed attempts.";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
