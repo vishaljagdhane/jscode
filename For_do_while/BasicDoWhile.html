@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Do While Loop Example</title>
+</head>
+<body>
+    <h1>Do While Loop Example</h1>
+    <div id="output"></div>
+
+    <script>
+        let count = 0; // Initialize count variable
+        let output = ""; // Initialize output string
+
+        // Do While loop
+        do {
+            count++; // Increment count
+            output += "Count: " + count + "<br>"; // Append current count to output
+        } while (count < 5); // Condition to continue the loop
+
+        // Display the output
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+</html>

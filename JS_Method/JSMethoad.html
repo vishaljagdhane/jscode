@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Map Method</title>
+</head>
+<body>
+    <h1>JavaScript Map Method</h1>
+    <script>
+        const fruits = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+        ]);
+
+        // Corrected the key to be a string
+        const appleCount = fruits.get("apples"); 
+        document.write(`Apple count: ${appleCount}<br>`);
+        const bananasCount = fruits.get("bananas");
+        document.write(`Banana count: ${bananasCount}<br>`);
+    </script>
+</body>
+</html>

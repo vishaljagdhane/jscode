@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break Statement Example</title>
+</head>
+<body>
+    <h1>Break Statement Example</h1>
+    <div id="output"></div>
+
+    <script>
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // An array of numbers
+        let output = ""; // Initialize output string
+
+        // Loop through the numbers array
+        for (let i = 0; i < numbers.length; i++) {
+            // Check if the number is 5
+            if (numbers[i] === 5) {
+                output += "Break statement triggered at number: " + numbers[i] + "<br>";
+                break; // Exit the loop when number is 5
+            }
+            output += "Current number: " + numbers[i] + "<br>"; // Output current number
+        }
+
+        // Display the output
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+</html>

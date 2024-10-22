@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break Statement in Nested Loops</title>
+</head>
+<body>
+    <h1>Multiplication Table with Break Statement</h1>
+    <div id="output"></div>
+
+    <script>
+        let output = ""; // Initialize output string
+
+        // Outer loop for multiplication table (1 to 5)
+        for (let i = 1; i <= 5; i++) {
+            output += "Multiplication table for " + i + ":<br>";
+
+            // Inner loop for multiplying i (1 to 10)
+            for (let j = 1; j <= 10; j++) {
+                let product = i * j;
+
+                // Break if the product exceeds 30
+                if (product > 30) {
+                    output += "Reached product limit for " + i + " at " + j + "<br>";
+                    break; // Exit the inner loop
+                }
+
+                output += i + " x " + j + " = " + product + "<br>"; // Output the product
+            }
+
+            output += "<br>"; // Add space between tables
+        }
+
+        // Display the output
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+</head>
+<body>
+    <h1>Guess the Number Game</h1>
+    <div id="output"></div>
+
+    <script>
+        const randomNumber = Math.floor(Math.random() * 100) + 1; // Generate a random number between 1 and 100
+        let guess;
+        let attempts = 0; // Initialize attempts counter
+        let output = ""; // Initialize output string
+
+        do {
+            // Prompt the user for a guess
+            guess = parseInt(prompt("Guess a number between 1 and 100 (or type 0 to quit):"));
+            attempts++; // Increment the attempt count
+
+            if (guess === 0) {
+                output += "You chose to quit the game.<br>";
+                break; // Exit the loop if the user wants to quit
+            }
+
+            if (guess < randomNumber) {
+                output += "Too low! Try again.<br>";
+            } else if (guess > randomNumber) {
+                output += "Too high! Try again.<br>";
+            } else {
+                output += "Congratulations! You've guessed the number " + randomNumber + " in " + attempts + " attempts!<br>";
+            }
+
+        } while (guess !== randomNumber && guess !== 0); // Continue until the user guesses the number or quits
+
+        // Display the output
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+</html>
