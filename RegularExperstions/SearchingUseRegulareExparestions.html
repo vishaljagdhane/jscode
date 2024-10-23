@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression Search Method</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Understanding Regular Expressions</h1>
+    <p>Regular expressions (regex) are powerful tools used in programming for searching, matching, and manipulating strings based on specific patterns.</p>
+    
+    <h2>Why Use Regular Expressions?</h2>
+    <ul>
+        <li><strong>Search and Replace:</strong> Easily find specific patterns within text and replace them.</li>
+        <li><strong>Validation:</strong> Validate formats, such as email addresses or phone numbers.</li>
+        <li><strong>Data Extraction:</strong> Extract meaningful data from strings, like URLs or specific tags.</li>
+    </ul>
+
+    <h2>Example of Regular Expression</h2>
+    <p>Here's a simple example that demonstrates how to use a regular expression in JavaScript to validate an email address:</p>
+    
+    <pre>
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const email = "example@example.com";
+
+if (emailRegex.test(email)) {
+    console.log("Valid email address!");
+} else {
+    console.log("Invalid email address!");
+}
+    </pre>
+
+    <h2>Conclusion</h2>
+    <p>Regular expressions are an essential part of string manipulation and data validation in programming. Learning to use them effectively can greatly enhance your ability to handle text data.</p>
+</body>
+</html>
