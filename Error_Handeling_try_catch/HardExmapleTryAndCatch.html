@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>भागाकार उदाहरण</h1>
+    <label for="numerator">कृपया एक संपूर्ण संख्या प्रविष्ट करा (न्यूमरेटर):</label>
+    <input type="number" id="numerator"><br><br>
+
+    <label for="denominator">कृपया भागाकार संख्या प्रविष्ट करा (डेनोमिनेटर):</label>
+    <input type="number" id="denominator"><br><br>
+
+    <button onclick="divideNumbers()">गणना करा</button>
+
+    <div class="result" id="result"></div>
+    <div class="error" id="error"></div>
+
+    <script>
+        function divideNumbers() {
+            const numerator = document.getElementById("numerator").value;
+            const denominator = document.getElementById("denominator").value;
+
+            const resultDiv = document.getElementById("result");
+            const errorDiv = document.getElementById("error");
+
+            // Clear previous results
+            resultDiv.textContent = '';
+            errorDiv.textContent = '';
+
+            try {
+                const num = parseFloat(numerator);
+                const denom = parseFloat(denominator);
+
+                // Check if denominator is zero
+                if (denom === 0) {
+                    throw new Error("शून्याने भागाकार करू शकत नाही."); // Division by zero error
+                }
+
+                // Check if inputs are valid numbers
+                if (isNaN(num) || isNaN(denom)) {
+                    throw new Error("कृपया एक वैध संपूर्ण संख्या प्रविष्ट करा."); // Invalid input error
+                }
+
+                // Perform division
+                const result = num / denom;
+                resultDiv.textContent = "तुमचा भागाकार आहे: " + result;
+            } catch (error) {
+                errorDiv.textContent = "त्रुटी: " + error.message; // Display error message
+            }
+        }
+    </script>
+
+</body>
+</html>

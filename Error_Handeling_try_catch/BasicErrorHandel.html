@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Of Error Handling Procss Try and Catch</title>
+</head>
+<body>
+    <h1>The try statement defines a code block to run (to try)</h1>
+    <h1>The catch statement defines a code block to handle any error.</h1>
+<h1>The finally statement defines a code block to run regardless of the result.</h1>
+<h1>The throw statement defines a custom error.</h1>
+
+<p id="demo"></p>
+
+<script>
+    // const adaler=alert("Adal")
+    try{
+        adalert("this is a test");
+    }
+    catch(err){
+        document.getElementById("demo").innerHTML = "An error occurred: " + err.message;
+    }
+</script>
+</body>
+</html>
