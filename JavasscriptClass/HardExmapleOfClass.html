@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+</head>
+<body>
+    <h1>Library Management System</h1>
+    <h2>Books Available:</h2>
+    <ul id="book-list"></ul>
+    
+    <h2>Members:</h2>
+    <ul id="member-list"></ul>
+
+    <script>
+        // Class representing a Book
+        class Book {
+            constructor(title, author, year) {
+                this.title = title;
+                this.author = author;
+                this.year = year;
+                this.isBorrowed = false; // Indicates if the book is borrowed
+            }
+
+            // Method to borrow a book
+            borrow() {
+                if (!this.isBorrowed) {
+                    this.isBorrowed = true;
+                    return `You have borrowed "${this.title}"`;
+                } else {
+                    return `"${this.title}" is already borrowed.`;
+                }
+            }
+
+            // Method to return a book
+            return() {
+                if (this.isBorrowed) {
+                    this.isBorrowed = false;
+                    return `You have returned "${this.title}"`;
+                } else {
+                    return `"${this.title}" was not borrowed.`;
+                }
+            }
+
+            // Method to get book details
+            getDetails() {
+                return `${this.title} by ${this.author}, published in ${this.year}.`;
+            }
+        }
+
+        // Class representing a Member
+        class Member {
+            constructor(name) {
+                this.name = name;
+                this.borrowedBooks = []; // Array to keep track of borrowed books
+            }
+
+            // Method to borrow a book
+            borrowBook(book) {
+                const message = book.borrow();
+                if (message.startsWith('You have borrowed')) {
+                    this.borrowedBooks.push(book);
+                }
+                return message;
+            }
+
+            // Method to return a book
+            returnBook(book) {
+                const message = book.return();
+                if (message.startsWith('You have returned')) {
+                    this.borrowedBooks = this.borrowedBooks.filter(b => b !== book);
+                }
+                return message;
+            }
+
+            // Method to get member details
+            getDetails() {
+                return `${this.name} has borrowed ${this.borrowedBooks.length} book(s).`;
+            }
+        }
+
+        // Creating some books
+        const book1 = new Book("1984", "George Orwell", 1949);
+        const book2 = new Book("To Kill a Mockingbird", "Harper Lee", 1960);
+        const book3 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925);
+
+        // Creating a member
+        const member1 = new Member("Alice");
+
+        // Borrowing and returning books
+        console.log(member1.borrowBook(book1)); // Borrowing book1
+        console.log(member1.borrowBook(book2)); // Borrowing book2
+        console.log(member1.borrowBook(book1)); // Trying to borrow book1 again
+        console.log(member1.returnBook(book1)); // Returning book1
+        console.log(member1.returnBook(book1)); // Trying to return book1 again
+
+        // Displaying the lists
+        const bookList = document.getElementById("book-list");
+        const memberList = document.getElementById("member-list");
+
+        [book1, book2, book3].forEach(book => {
+            const li = document.createElement("li");
+            li.textContent = book.getDetails();
+            bookList.appendChild(li);
+        });
+
+        const memberLi = document.createElement("li");
+        memberLi.textContent = member1.getDetails();
+        memberList.appendChild(memberLi);
+    </script>
+</body>
+</html>

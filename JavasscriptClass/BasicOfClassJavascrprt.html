@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Class Example</title>
+</head>
+<body>
+    <h1>JavaScript Class Example</h1>
+    <h2 id="output"></h2>
+
+    <script>
+        // Define a class named Person
+        class Person {
+            constructor(name, age) {
+                this.name = name; // Set the name property
+                this.age = age;   // Set the age property
+            }
+
+            // Method to get person's details
+            getDetails() {
+                return `${this.name} is ${this.age} years old.`;
+            }
+        }
+
+        // Create an instance of the Person class
+        const person1 = new Person("Alice", 30);
+
+        // Display the details of the person
+        document.getElementById("output").innerHTML = person1.getDetails();
+    </script>
+</body>
+</html>
