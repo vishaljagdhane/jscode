@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrun This myFuntions</title>
+</head>
+<body>
+   <h1>This return my functions </h1> 
+<p id="demo"></p>
+   <script>
+    document.getElementById("demo").innerHTML = myFuntions();
+    function myFuntions(){
+        let a = 5, b = 10;
+        // return `The sum of ${a} and ${b} is ${a + b}` ;// Value is not Accepected value is string amd Number
+        return this;
+    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Of This KeyWord Check by </title>
+</head>
+<body>
+    <h1>The JavaScript this Keyword</h1>
+
+    <h3>
+    What is this?
+In JavaScript, the this keyword refers to an object.
+
+The this keyword refers to different objects depending on how it is used:
+    </h3>
+<script>
+const person={
+    fname:"vishal",
+    lname:"Jagdhane",
+    id:1001,
+    getFullName: function(){
+        return this.fname + " " + this.lname + " " + this.id;
+    }
+}
+document.write("This Is keyword using ",person.getFullName());
+
+</script>
+</body>
+</html>
