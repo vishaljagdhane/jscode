@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Module</title>
+</head>
+<body>
+    <h1>JavaScript Module Concept</h1>
+    <h2>Importance of JavaScript Modules</h2>
+    <p>JavaScript modules allow you to divide your code into separate files, making it more organized and manageable. You can export variables and functions from one module and import them into another. This helps in code reusability and better maintenance.</p>
+
+    <h2>Use of the Export</h2>
+
+    <h3>Variable Export</h3>
+    <p>Variables can be exported from a module so they can be used in other files.</p>
+    <pre>
+    // variable.js
+    export const pi = 3.14;
+    </pre>
+
+    <h3>Function Export</h3>
+    <p>Functions can also be exported and imported, allowing you to keep your code modular.</p>
+    <pre>
+    // mathFunctions.js
+    export function add(a, b) {
+        return a + b;
+    }
+    </pre>
+
+    <h2>Example of Using Exports</h2>
+    <p>Here’s how you can import the exported variable and function in another file:</p>
+    <pre>
+    // main.js
+    import { pi } from './variable.js';
+    import { add } from './mathFunctions.js';
+
+    console.log(`Value of Pi: ${pi}`);
+    console.log(`Sum: ${add(2, 3)}`);
+    </pre>
+
+    <h2>JavaScript Modules in Marathi</h2>
+    <h2>JavaScript मॉड्यूलचे महत्त्व</h2>
+    <p>JavaScript मॉड्यूल तुम्हाला तुमचा कोड वेगवेगळ्या फाइल्समध्ये विभाजित करण्यास मदत करतात, ज्यामुळे तो अधिक संघटित आणि व्यवस्थापित करणे सोपे होते. तुम्ही एक मॉड्यूलमधून व्हेरिएबल्स आणि कार्ये निर्यात करू शकता आणि दुसऱ्या मॉड्यूलमध्ये त्यांचा आयात करू शकता. यामुळे कोडचे पुनर्वापर आणि चांगली देखभाल होऊ शकते.</p>
+
+    <h2>निर्यात वापरणे</h2>
+
+    <h3>व्हेरिएबल निर्यात</h3>
+    <p>व्हेरिएबल्स एक मॉड्यूलमधून निर्यात केल्या जाऊ शकतात जेणेकरून त्या इतर फाइल्समध्ये वापरल्या जाऊ शकतील.</p>
+    <pre>
+    // variable.js
+    export const pi = 3.14;
+    </pre>
+
+    <h3>कार्य निर्यात</h3>
+    <p>कार्ये देखील निर्यात केली जाऊ शकतात आणि आयात केल्या जाऊ शकतात, ज्यामुळे तुमचा कोड मॉड्यूलर राहतो.</p>
+    <pre>
+    // mathFunctions.js
+    export function add(a, b) {
+        return a + b;
+    }
+    </pre>
+
+    <h2>निर्यात केलेल्या कार्यांचा वापर</h2>
+    <p>इतर फाइलमध्ये निर्यात केलेली व्हेरिएबल आणि कार्ये कशाप्रकारे आयात करू शकता याचे उदाहरण:</p>
+    <pre>
+    // main.js
+    import { pi } from './variable.js';
+    import { add } from './mathFunctions.js';
+
+    console.log(`Pi चा मूल्य: ${pi}`);
+    console.log(`योग: ${add(2, 3)}`);
+    </pre>
+</body>
+</html>

@@ -1,0 +1,1 @@
+export  const arr=["vishal","Haribhau","Jagdhane","Auranagabd","Maharashtra","Pune"]
