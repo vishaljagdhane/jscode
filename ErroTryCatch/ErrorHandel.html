@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>त्रुटी हाताळणे - Try आणि Catch</title>
+    <script>
+        function riskyFunction() {
+            // येथे काही त्रुटी निर्माण करणारा कोड असू शकतो
+            throw new Error("हा एक उदाहरण त्रुटी आहे."); // उदाहरणासाठी त्रुटी फेकतो
+        }
+
+        function handleError() {
+            try {
+                // Try ब्लॉकमध्ये संभाव्य त्रुटी निर्माण करणारा कोड
+                let result = riskyFunction();
+                console.log(result);
+            } catch (error) {
+                // Catch ब्लॉकमध्ये त्रुटी हाताळली जाते
+                console.error("एक त्रुटी आली:", error.message);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>ही त्रुटी हाताळण्याची प्रक्रिया आहे.</h1>
+    <button onclick="handleError()">त्रुटी तपासा</button>
+</body>
+</html>
