@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async aWait JavaScript Async </title>
+</head>
+<body>
+
+    <h1>Async aWait Using by the code</h1>
+
+    <script>
+        function geetingData(){
+       return "Hello Async A wait using"
+        }
+        async function DisplayGeeting(){
+            const data = await geetingData()
+            console.log(data)
+            document.write("This Function is called every Time  async await using"+ data )
+        }
+        
+        DisplayGeeting()
+
+    </script>
+    
+</body>
+</html>

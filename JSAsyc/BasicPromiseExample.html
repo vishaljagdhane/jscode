@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Of Promises Example</title>
+</head>
+<body>
+    <h1>Basic Of Promises Example</h1>
+    <p id="demo"></p> <!-- This paragraph will display the result -->
+    
+    <script>
+        // Create a new Promise
+        const promise = new Promise(function (myresolve, myreject) {
+            // Simulate an asynchronous operation using setTimeout
+            setTimeout(function() {
+                myresolve("Vishal Jagdhane"); // Resolve the promise after 3 seconds
+            }, 3000);
+        });
+
+        // Handle the result of the promise
+        promise.then(function(value) {
+            // Update the content of the paragraph with the resolved value
+            document.getElementById("demo").innerHTML = value;
+        });
+    </script>
+</body>
+</html>

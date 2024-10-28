@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await Multiple Functions</title>
+</head>
+<body>
+    <h1>Multiple Functions Using Async Await</h1>
+
+    <script>
+        // Function for addition
+        function additions(a, b) {
+            const result = a + b;
+            return result;
+        }
+
+        // Function for multiplication
+        function multiplications(a, b) {
+            const result = a * b;
+            return result;
+        }
+
+        // Async function to handle addition and log the result
+        async function asyncWaitHandler(a, b) {
+            const additionResult = additions(a, b); // Call additions function
+            console.log("Addition:", additionResult); // Log addition result
+            document.write(additionResult)
+            const multiplicationResult = multiplications(a, b); // Call multiplications function
+            document.write(multiplicationResult)
+            console.log("Multiplication:", multiplicationResult); // Log multiplication result
+        }
+
+        // Call the async function with parameters
+        asyncWaitHandler(10, 5);
+    </script>
+    
+</body>
+</html>
