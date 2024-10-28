@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JSON Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .user {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Users List</h1>
+    <div id="userList"></div>
+
+    <script>
+        // Dummy JSON data
+        const jsonData = `
+        {
+            "users": [
+                {"name": "Vishal", "age": 30, "city": "Aurangabad"},
+                {"name": "Haribhau", "age": 35, "city": "Pune"},
+                {"name": "Jagdhane", "age": 28, "city": "Mumbai"}
+            ]
+        }`;
+
+        // Parse the JSON data
+        const data = JSON.parse(jsonData);
+
+        // Get the user list div
+        const userListDiv = document.getElementById('userList');
+
+        // Iterate over the users and display their details
+        data.users.forEach(user => {
+            const userDiv = document.createElement('div');
+            userDiv.className = 'user';
+            userDiv.innerHTML = `<strong>Name:</strong> ${user.name} <br>
+                                <strong>Age:</strong> ${user.age} <br>
+                                <strong>City:</strong> ${user.city}`;
+            userListDiv.appendChild(userDiv);
+        });
+    </script>
+</body>
+</html>

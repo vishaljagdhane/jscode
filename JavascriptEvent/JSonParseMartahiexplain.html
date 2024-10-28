@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>साइडबार उदाहरण</title>
+</head>
+<body>
+    <h1>फरकांचा सारांश
+        JSON.parse: JSON स्ट्रिंग्सला जावास्क्रिप्ट ऑब्जेक्टमध्ये रूपांतरित करते.
+        JSON.stringify: जावास्क्रिप्ट ऑब्जेक्ट्सला JSON स्ट्रिंगमध्ये रूपांतरित करते.
+        व्यावहारिक उपयोग केसेस
+        डेटा आणणे: जेव्हा तुम्ही वेब API कडून डेटा आणता, तेव्हा तो सहसा JSON स्ट्रिंगमध्ये येतो. तुम्ही JSON.parse वापरून त्याला जावास्क्रिप्ट ऑब्जेक्टमध्ये रूपांतरित करू शकता, ज्यावर तुम्ही काम करू शकता.
+        
+        डेटा पाठवणे: जेव्हा तुम्हाला सर्व्हरवर डेटा पाठवायचा असतो (उदाहरणार्थ, AJAX विनंतीद्वारे), तेव्हा तुम्ही JSON.stringify वापरून तुमचा जावास्क्रिप्ट ऑब्जेक्ट JSON स्ट्रिंगमध्ये रूपांतरित करू शकता.</h1>
+    <div class="sidebar" id="sidebar">
+        <div class="header">
+            <h2>माझा डिफॉल्ट मेनू</h2>
+            <button class="close-btn" onclick="toggleSidebar()">×</button>
+        </div>
+        <ul id="menu" class="menu">
+            <li>आयटम 1</li>
+            <li>आयटम 2</li>
+            <li>आयटम 3</li>
+        </ul>
+    </div>
+    <button class="open-btn" onclick="toggleSidebar()">☰</button>
+
+    <h1>जावास्क्रिप्ट JSON पार्स</h1>
+    <pre id="output"></pre> <!-- Use <pre> to maintain formatting -->
+
+    <script>
+        // Sidebar toggle functionality
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-250px'; // Hide
+            } else {
+                sidebar.style.left = '0px'; // Show
+            }
+        }
+
+        // JSON parsing example
+        let text = '{ "employees" : [' +
+            '{ "firstName":"John" , "lastName":"Doe" },' +
+            '{ "firstName":"Anna" , "lastName":"Smith" },' +
+            '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+        
+        const obj = JSON.parse(text);
+
+        // Display the JSON in a readable format
+        document.getElementById("output").textContent = JSON.stringify(obj, null, 2);
+        console.log(obj);
+    </script>
+</body>
+</html>

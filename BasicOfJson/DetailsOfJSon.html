@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Of JSON</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Introduction to JSON</h1>
+    
+    <h2>What is JSON?</h2>
+    <p>JSON stands for <strong>JavaScript Object Notation</strong>. It is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate.</p>
+
+    <h2>Why Use JSON?</h2>
+    <ul>
+        <li>Human-readable format: Easy to understand and edit.</li>
+        <li>Language-independent: JSON is text and can be used with most programming languages.</li>
+        <li>Lightweight: Ideal for data transmission over networks.</li>
+    </ul>
+
+    <h2>Basic Structure of JSON</h2>
+    <p>JSON data is represented in key-value pairs, similar to JavaScript objects. Here’s a basic example:</p>
+    <pre><code>{
+    "name": "Vishal",
+    "age": 30,
+    "city": "Aurangabad"
+}</code></pre>
+
+    <h2>JSON Array Example</h2>
+    <p>JSON can also contain arrays. Here’s an example of a JSON array:</p>
+    <pre><code>[
+    {
+        "name": "Vishal",
+        "age": 30
+    },
+    {
+        "name": "Haribhau",
+        "age": 35
+    }
+]</code></pre>
+
+    <h2>How to Use JSON in JavaScript</h2>
+    <p>You can parse JSON data and convert it into a JavaScript object using <code>JSON.parse()</code> and convert a JavaScript object into JSON using <code>JSON.stringify()</code>.</p>
+
+    <h3>Example:</h3>
+    <pre><code>const jsonString = '{"name":"Vishal","age":30}';
+const jsonObject = JSON.parse(jsonString); // Converts JSON string to object
+
+console.log(jsonObject.name); // Output: Vishal
+
+const newJsonString = JSON.stringify(jsonObject); // Converts object to JSON string
+console.log(newJsonString); // Output: {"name":"Vishal","age":30}</code></pre>
+</body>
+</html>

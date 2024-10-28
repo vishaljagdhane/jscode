@@ -1,0 +1,21 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JSON Parse</title>
+    </head>
+    <body>
+        <h1>Javascript Parse JSOn</h1>
+
+        <script>
+            let text = '{ "employees" : [' +
+    '{ "firstName":"John" , "lastName":"Doe" },' +
+    '{ "firstName":"Anna" , "lastName":"Smith" },' +
+    '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+        const obj =JSON.parse(text)
+        document.write(obj)
+        console.log(obj)
+        </script>
+    </body>
+    </html>
