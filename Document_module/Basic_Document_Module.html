@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        ul {
+            margin: 10px 0;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML DOM (Document Object Model)</h1>
+
+    <h2>Introduction</h2>
+    <p>
+        The HTML DOM is a programming interface for web documents. It represents the structure of a document as a tree of objects, allowing programming languages, such as JavaScript, to manipulate the content, structure, and style of web pages.
+    </p>
+
+    <h2>Key Concepts</h2>
+    <ul>
+        <li><strong>Document:</strong> The entire web page, represented as an object.</li>
+        <li><strong>Element:</strong> An individual component of the page (e.g., <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>).</li>
+        <li><strong>Node:</strong> The basic unit of the DOM, which can be an element, attribute, or text.</li>
+        <li><strong>Tree Structure:</strong> The DOM is structured as a tree, with the document as the root node and elements as child nodes.</li>
+    </ul>
+
+    <h2>Manipulating the DOM with JavaScript</h2>
+    <p>
+        JavaScript can be used to change the document structure, style, and content dynamically. Below are some common methods:
+    </p>
+
+    <h3>Accessing Elements</h3>
+    <pre>
+const element = document.getElementById('myElement'); // Access by ID
+const elements = document.getElementsByClassName('myClass'); // Access by class
+const queryElement = document.querySelector('.myClass'); // Access using CSS selectors
+    </pre>
+
+    <h3>Modifying Content</h3>
+    <pre>
+element.innerHTML = 'New Content'; // Change HTML content
+element.textContent = 'New Text'; // Change text content
+    </pre>
+
+    <h3>Changing Styles</h3>
+    <pre>
+element.style.color = 'blue'; // Change text color
+element.style.display = 'none'; // Hide the element
+    </pre>
+
+    <h3>Adding and Removing Elements</h3>
+    <pre>
+// Create a new element
+const newElement = document.createElement('div');
+newElement.textContent = 'This is a new element';
+document.body.appendChild(newElement); // Add to the body
+
+// Remove an element
+document.body.removeChild(element); // Remove an element from the body
+    </pre>
+
+    <h2>Example: Simple DOM Manipulation</h2>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;DOM Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 id="header"&gt;Hello, World!&lt;/h1&gt;
+    &lt;button id="changeButton"&gt;Change Text&lt;/button&gt;
+
+    &lt;script&gt;
+        document.getElementById('changeButton').onclick = function() {
+            document.getElementById('header').textContent = 'Text Changed!';
+        };
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+    <h2>Conclusion</h2>
+    <p>
+        The HTML DOM provides a powerful interface for interacting with web pages. Understanding the DOM and how to manipulate it with JavaScript is essential for creating dynamic and interactive web applications.
+    </p>
+
+</body>
+</html>

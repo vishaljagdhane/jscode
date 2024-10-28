@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding HTML Objects in DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Finding HTML Objects in DOM</h1>
+    <h2>HTML DOM Properties</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+                <th>DOM Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>document.anchors</td>
+                <td>Returns all <code>&lt;a&gt;</code> elements that have a name attribute</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>document.applets</td>
+                <td>Deprecated</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>document.baseURI</td>
+                <td>Returns the absolute base URI of the document</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>document.body</td>
+                <td>Returns the <code>&lt;body&gt;</code> element</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>document.cookie</td>
+                <td>Returns the document's cookie</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>document.doctype</td>
+                <td>Returns the document's doctype</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>document.documentElement</td>
+                <td>Returns the <code>&lt;html&gt;</code> element</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>document.documentMode</td>
+                <td>Returns the mode used by the browser</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>document.documentURI</td>
+                <td>Returns the URI of the document</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>document.domain</td>
+                <td>Returns the domain name of the document server</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>document.embeds</td>
+                <td>Returns all <code>&lt;embed&gt;</code> elements</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>document.forms</td>
+                <td>Returns all <code>&lt;form&gt;</code> elements</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>document.head</td>
+                <td>Returns the <code>&lt;head&gt;</code> element</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>document.images</td>
+                <td>Returns all <code>&lt;img&gt;</code> elements</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>document.implementation</td>
+                <td>Returns the DOM implementation</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>document.inputEncoding</td>
+                <td>Returns the document's encoding (character set)</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>document.lastModified</td>
+                <td>Returns the date and time the document was updated</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>document.links</td>
+                <td>Returns all <code>&lt;area&gt;</code> and <code>&lt;a&gt;</code> elements that have a href attribute</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>document.readyState</td>
+                <td>Returns the (loading) status of the document</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>document.referrer</td>
+                <td>Returns the URI of the referrer (the linking document)</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>document.scripts</td>
+                <td>Returns all <code>&lt;script&gt;</code> elements</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>document.title</td>
+                <td>Returns the <code>&lt;title&gt;</code> element</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>document.URL</td>
+                <td>Returns the complete URL of the document</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>काम कसा करतो</h2>
+    <p>
+        वरील प्रत्येक प्रॉपर्टी HTML दस्तावेजाच्या विशिष्ट घटकांवरून माहिती मिळविण्यासाठी वापरली जाते. 
+        उदाहरणार्थ, <code>document.body</code> प्रॉपर्टी आपल्याला <code>&lt;body&gt;</code> घटकाचा संदर्भ देते, 
+        ज्यामुळे आपल्याला त्या घटकाच्या आतचे सामग्री आणि शैली बदलण्याची परवानगी मिळते. 
+        प्रत्येक प्रॉपर्टी DOM स्तरावर एक विशिष्ट स्थान आहे, 
+        आणि या प्रॉपर्टीज HTML5 मध्ये अद्याप वैध आहेत.
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Getting Module</title>
+</head>
+<body>
+    <h1>How To Get Value in Real Time</h1>
+
+    <input type="text" id="TextField" oninput="updateOutput()" />
+    <button onclick="gettingValue()">Add</button>
+
+    <p id="output"></p> <!-- To display the output -->
+
+    <script>
+        function updateOutput() {
+            const text = document.getElementById("TextField").value; // Get value as user types
+            document.getElementById("output").innerText = text; // Display the value
+        }
+
+        function gettingValue() {
+            const text = document.getElementById("TextField").value; // Get value when button is clicked
+            // Additional actions can be taken here
+            console.log("Final value added:", text); // Example action
+            document.getElementById("output").innerText = text; 
+
+        }
+    </script>
+</body>
+</html>

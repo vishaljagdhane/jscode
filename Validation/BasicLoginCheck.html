@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Login Form Checking</title>
+</head>
+
+<body>
+    <h1>Basic Login</h1>
+    <form onsubmit="return userLogin(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password"><br><br>
+        <button type="submit">Login Here</button>
+    </form>
+    <script>
+        function userLogin(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const name = document.getElementById('name').value; // Get the value from the input field
+            const password = document.getElementById('password').value; // Get the value from the input field
+
+            // Check if fields are empty
+            if (name === '' || password === '') {
+                alert('Please Fill All Fields');
+                return false;
+            }
+
+            // Check credentials
+            if (name === 'admin' && password === 'admin123') {
+                alert('Login Successful');
+                window.location.href = 'https://www.google.co.in/'; // Redirect to the specified URL
+            } else {
+                alert('Invalid Credentials');
+            }
+        }
+    </script>
+</body>
+
+</html>

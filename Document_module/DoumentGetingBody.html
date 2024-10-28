@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Getting Body</title>
+</head>
+<body>
+    <h1>Document Body Content</h1>
+    <p>This content is in the body of the document.</p>
+
+    <button onclick="displayBody()">Show Body Element</button>
+
+    <p id="output"></p> <!-- To display the body element -->
+
+    <script>
+        function displayBody() {
+            const bodyContent = document.body.innerHTML; // Get the inner HTML of the body
+            document.getElementById("output").innerText = bodyContent; // Display the body content
+        }
+    </script>
+</body>
+</html>

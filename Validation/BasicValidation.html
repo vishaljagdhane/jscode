@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Validations</title>
+</head>
+<body>
+    <h1>Basic Validations</h1>
+    <form id="validationForm" onsubmit="BasicValitons">
+        <label for="name">Name:</label>
+        <input type="text" id="name" ><br><br>
+
+     
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" ><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" ><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" ><br><br>
+
+        <button type="submit" onclick="BasicValitons()" >Submit</button>
+    </form>
+
+    <script>
+        function BasicValitons(){
+       const name  = document.getElementById("name").value;
+         const password =  document.getElementById("password").value;
+         const age = document.getElementById("age").value;
+         const phone = document.getElementById("phone").value;
+            if(name =='' || password == '' || age =='' || phone == ''){
+                alert("Please fill all the fields");
+                return false;
+            }
+            else{
+            document.write("very Good")
+                return true;
+            }
+
+        }
+   
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Name and Tag Name Example</title>
+    <style>
+        /* CSS Styles */
+        .highlight {
+            background-color: yellow; /* Highlight class */
+            font-weight: bold;        /* Bold text */
+        }
+
+        .info {
+            color: blue;             /* Info class */
+            font-style: italic;      /* Italic text */
+        }
+
+        p {
+            margin: 10px;           /* Default margin for paragraphs */
+        }
+
+        h1 {
+            color: green;           /* Header color */
+        }
+    </style>
+</head>
+<body>
+    <h1>Class Name, Tag Name, and Styles Example</h1>
+    <p class="info">This is a paragraph with the "info" class.</p>
+    <p>This is a regular paragraph without any class.</p>
+    <p class="highlight">This paragraph has the "highlight" class.</p>
+
+    <button onclick="highlightText()">Highlight All Paragraphs</button>
+
+    <script>
+        function highlightText() {
+            // Get all paragraph elements
+            const paragraphs = document.getElementsByTagName("p");
+
+            // Add the "highlight" class to each paragraph
+            for (let i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].classList.toggle("highlight"); // Toggle highlight class
+            }
+        }
+    </script>
+</body>
+</html>
