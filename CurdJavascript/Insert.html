@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Operation in JavaScript</title>
+</head>
+<body>
+    <h1>Insert Operation In JavaScript</h1>
+
+    <input type="text" id="first_Text">
+    <button onclick="AddingData()">Add Data</button>
+    <ul id="dataList"></ul>
+
+    <script>
+        let dataArray = [];
+
+        function AddingData() {
+            const firstText = document.getElementById("first_Text").value;
+            dataArray.push(firstText);
+            console.log(dataArray);
+            
+            // Clear the input field
+            document.getElementById("first_Text").value = '';
+
+            // Update the displayed list
+            updateList();
+        }
+
+        function updateList() {
+            const list = document.getElementById("dataList");
+            list.innerHTML = ''; // Clear the list before updating
+
+            dataArray.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                list.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
