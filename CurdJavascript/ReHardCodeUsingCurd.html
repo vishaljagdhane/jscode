@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hard Curd Operation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 15px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .form-data {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input{
+            text-align: center;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>This Total Hard Code Using By the Curd Opreation no any help</h1>
+    <div class="form-data">
+        <h3 >Please Fill The Informations</h3>
+        <input type="text" id="fname" placeholder="Please Enter Your Frist Name" required>
+        <input type="text" id="mname" placeholder="Please Enter Your Mid Name" required>
+        <input type="text" id="lname" placeholder="Please Enter Your Last Name Name" required>
+        <input type="email" id="email" placeholder="Please Enter Your Email" required>
+        <input type="text" id="mobile" placeholder="Please Enter Your Mobile Number" required>
+        <input type="text" id="city" placeholder="Please Enter Your City" required>
+        <button onclick="AddData()">Add Data</button>
+
+    </div>
+    <div class="userTable">
+        <table id="userData">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Mobile Number</th>
+                <th>City</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+    </div>
+    <script>
+        const userData = [];
+        function AddData(){
+    
+          const fname =document.getElementById("fname").value;
+          const mname =document.getElementById("mname").value;
+          const lname =document.getElementById("lname").value;
+          const email =document.getElementById("email").value;
+          const mobile =document.getElementById("mobile").value;
+          const city =document.getElementById("city").value;
+          console.log("Functon is successfully added" +fname)
+          userData.push({fname, mname,lname,email,mobile,city});
+          console.log(userData)
+          showUserData();
+        }
+        function showUserData(){
+            const tablebody = document.getElementById("tableBody");
+            tablebody.innerHTML=''
+          const tableData=  userData.map((data,index)=>{
+            return `<tr>
+                <td>${data.fname}</td>
+                <td>${data.mname}</td>
+                <td>${data.lname}</td>
+                <td>${data.email}</td>
+                <td>${data.mobile}</td>
+                <td>${data.city}</td>
+                <td><button onclick="deleteUser(${index})">Delete</button></td>
+            </tr>`
+          })
+            tablebody.innerHTML=tableData
+
+
+        }
+        function deleteUser(index){
+            userData.splice(index, 1);
+            showUserData();
+        }
+    </script>
+</body>
+</html>

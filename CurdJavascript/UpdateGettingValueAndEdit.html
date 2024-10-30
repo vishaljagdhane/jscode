@@ -92,6 +92,17 @@
         document.getElementById("city").value=''
         PrintData()
     }
+function clearfiled (){
+    document.getElementById("fname").value=''
+    document.getElementById("mname").value=''
+    document.getElementById("lname").value=''
+    document.getElementById("email").value=''
+    document.getElementById("mobile").value=''
+
+    document.getElementById("address").value=''
+    document.getElementById("city").value=''
+ 
+}
     function PrintData(){
       const TableBody = document.getElementById("tableBody");
       TableBody.innerHTML=''
@@ -124,6 +135,7 @@ TableBody.innerHTML=TableRow;
         UserDta.splice(index,1)
         PrintData()
     }
+    
     </script>
 </body>
 </html>
