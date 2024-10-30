@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting and Update Value</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 15px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .form-data {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Collection and Editing</h1>
+    <h2>Define Array and Get Runtime Values to Show in a Table</h2>
+    <div class="form-data">
+        <input type="text" id="fname" placeholder="First Name">
+        <input type="text" id="lname" placeholder="Last Name">
+        <input type="text" id="address" placeholder="Address">
+        <input type="text" id="city" placeholder="City">
+        <button onclick="addUser()">Add User</button>
+    </div>
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- User data will be inserted here -->
+        </tbody>
+    </table>
+    <script>
+        // Add your JavaScript code here
+        const UserDta =[]
+        function addUser() {
+           const fname = document.getElementById("fname").value;
+        const lname = document.getElementById("lname").value;
+        const address = document.getElementById("address").value;
+        const city = document.getElementById("city").value;
+        
+        if(fname =='' && lname=='' && address =='' && city ==''){
+        alert("please enter all filed")
+        }
+        UserDta.push({fname,lname,address,city})
+        console.log(UserDta)
+        document.getElementById("fname").value=''
+        document.getElementById("lname").value=''
+        document.getElementById("address").value=''
+        document.getElementById("city").value=''
+        PrintData()
+    }
+    function PrintData(){
+      const TableBody = document.getElementById("tableBody");
+      TableBody.innerHTML=''
+
+      const TableRow = UserDta.map((DataUser,index)=>{
+        return `<tr>
+            <td>${DataUser.fname} </td>
+            <td>${DataUser.lname} </td>
+            <td>${DataUser.address} </td>
+            <td>${DataUser.city} </td>
+              <td><button onclick="editUser(${index})">Edit</button></td>
+                        <td><button onclick="deleteUser(${index})">Delete</button></td
+        </tr>`
+      }).join(',')
+      
+TableBody.innerHTML=TableRow;
+  
+    }
+    function editUser(index){
+
+        const userEdit = UserDta[index];
+        document.getElementById("fname").value = userEdit.fname;
+        document.getElementById("lname").value = userEdit.lname;
+        document.getElementById("address").value = userEdit.address;
+        document.getElementById("city").value = userEdit.city;
+        UserDta.splice(index,1)
+        PrintData()
+    }
+    function deleteUser(index){
+        UserDta.splice(index,1)
+        PrintData()
+    }
+    </script>
+</body>
+</html>
